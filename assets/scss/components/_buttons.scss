@@ -1,0 +1,24 @@
+.btn-light{
+    display: inline-block;
+    position: relative;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 18px;
+    color: #4C4C4C;
+    text-align: center;
+    padding: 10px 30px;
+    background: $btn-white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+    transition-duration: 100ms;
+    z-index: 100;
+    cursor: pointer;
+    &:hover{
+        transform: translateY(-1px);
+    }
+    &:active{
+        transform: translateY(0);
+        
+    }
+}

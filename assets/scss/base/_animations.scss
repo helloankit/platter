@@ -1,0 +1,21 @@
+@keyframes to_and_fro {
+    0% {
+     left: 0;
+    }
+    50% {
+     left: calc(100% - 5rem);
+     
+    }
+    100% {
+      left: 0%;
+    }
+  }
+
+  @keyframes rotate_circle {
+    0% {
+        transform: translateY(60%) rotate(0deg);
+       }
+       100% {
+        transform: translateY(60%) rotate(360deg);
+       }
+  }

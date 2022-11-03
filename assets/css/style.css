@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Rubik:wght@200;300;400&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -4624,6 +4624,276 @@ progress {
   .d-print-none {
     display: none !important; } }
 
-p {
-  font-family: 'Lexend', sans-serif;
+@keyframes to_and_fro {
+  0% {
+    left: 0; }
+  50% {
+    left: calc(100% - 5rem); }
+  100% {
+    left: 0%; } }
+
+@keyframes rotate_circle {
+  0% {
+    transform: translateY(60%) rotate(0deg); }
+  100% {
+    transform: translateY(60%) rotate(360deg); } }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden; }
+  @media (max-width: 61.99em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 47.99em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 23.74em) {
+    html {
+      font-size: 43.75%; } }
+
+a {
+  text-decoration: none; }
+
+section {
+  padding: 8rem 0; }
+  @media (max-width: 47.99em) {
+    section {
+      padding: 5.4rem 0; } }
+
+* {
+  font-family: 'Lexend', sans-serif; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400; }
+
+.f-primary {
+  font-family: 'DM Serif Display', serif !important; }
+
+.text-500 {
   font-weight: 500; }
+
+.text-300 {
+  font-weight: 300; }
+
+.text-400 {
+  font-weight: 400; }
+
+h1, .h1 {
+  font-size: 8rem;
+  line-height: 10rem; }
+
+h2, .h2 {
+  font-size: 6rem;
+  line-height: 8rem; }
+
+h3, .h3 {
+  font-size: 4.4rem;
+  line-height: 6rem; }
+
+h4, .h4 {
+  font-size: 3.6rem;
+  line-height: 3.2rem; }
+
+h5, .h5 {
+  font-size: 2.5rem;
+  line-height: 2rem; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.btn-light {
+  display: inline-block;
+  position: relative;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 18px;
+  color: #4C4C4C;
+  text-align: center;
+  padding: 10px 30px;
+  background: #F1F1F1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
+  transition-duration: 100ms;
+  z-index: 100;
+  cursor: pointer; }
+  .btn-light:hover {
+    transform: translateY(-1px); }
+  .btn-light:active {
+    transform: translateY(0); }
+
+.form-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.form-input {
+  font-family: 'Rubik', serif;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  background: #ffffff;
+  border: 1px solid #E5E5E5;
+  border-radius: 1rem;
+  width: 100%;
+  transition: all 0.35s cubic-bezier(0.51, 0.92, 0.24, 1.15); }
+  .form-input::placeholder {
+    color: #B3B3B3;
+    font-size: 1.6rem;
+    font-family: 'Rubik', serif; }
+
+.submit {
+  color: #000000; }
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin-top: 7rem; }
+  .slider-bob {
+    min-width: 5rem;
+    min-height: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: to_and_fro 6s infinite linear; }
+  .slider-line {
+    height: 1px;
+    background-color: #000000; }
+
+.nav-header {
+  width: 100%;
+  padding: 1.6rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0.8rem 2.4rem 0 #a0a0a02b;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000; }
+  .nav-header .logo_img {
+    width: 10rem;
+    height: auto; }
+
+.hero-section {
+  z-index: 10;
+  padding: 16rem 0; }
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    min-width: 35rem;
+    min-height: 35rem;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    right: 20%;
+    top: 0;
+    transform: translateY(-30%);
+    background: #D9D9D9;
+    opacity: 20%;
+    border-radius: 25rem;
+    z-index: -1; }
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    min-width: 60rem;
+    min-height: 60rem;
+    width: 60rem;
+    height: 60rem;
+    left: 25%;
+    top: 2rem;
+    background: #D9D9D9;
+    opacity: 0.2;
+    border-radius: 0px 0px 50px 50px;
+    z-index: -1; }
+
+.hero-text {
+  font-size: 12rem;
+  font-style: italic; }
+
+.hero-subtext {
+  font-size: 6rem;
+  letter-spacing: -0.15rem;
+  margin-top: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center; }
+
+.platter-stamp {
+  min-width: 18rem;
+  min-height: 18rem;
+  width: 18rem;
+  height: 18rem;
+  animation: rotate_circle 4s infinite linear;
+  position: absolute;
+  right: 15%;
+  bottom: 0; }
+  .platter-stamp img {
+    width: 100%;
+    height: 100%; }
+
+.platter-values {
+  background-color: rgba(217, 217, 217, 0.2); }
+  .platter-values .value-heading-1 {
+    font-size: 9rem; }
+  .platter-values .value-heading-2 {
+    text-align: right;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    font-style: italic;
+    font-size: 16rem;
+    transform: translate(-8%, -30%); }
+  .platter-values .value-points-wrapper {
+    margin-top: 8rem; }
+  .platter-values .value-text-wrapper {
+    margin: 0 2rem; }
+    .platter-values .value-text-wrapper h4, .platter-values .value-text-wrapper .h4 {
+      line-height: 1;
+      letter-spacing: 0;
+      font-size: 3.2rem;
+      z-index: 2;
+      position: relative; }
+    .platter-values .value-text-wrapper p {
+      font-size: 3.2rem;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.05rem;
+      z-index: 2;
+      position: relative; }
+    .platter-values .value-text-wrapper .value-image {
+      height: 28rem;
+      width: 60%;
+      background-color: #ffffff; }
+    .platter-values .value-text-wrapper .value1-image, .platter-values .value-text-wrapper .value3-image {
+      transform: translate(-20%, -15%);
+      z-index: -1; }
+    .platter-values .value-text-wrapper .value2-image {
+      transform: translate(-20%, 15%);
+      z-index: -1; }

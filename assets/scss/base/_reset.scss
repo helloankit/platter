@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    background-color: $color-white;    overflow-x: hidden;
+  }
+
+html{
+    font-size: 62.5%; //10px
+    overflow-x: hidden;
+
+
+    @include res(md){
+        font-size: 50%; // 9px
+    }
+
+    @include res(sm){
+        font-size: 50%; // 8px
+    }
+
+    @include res(xxs){
+       font-size: 43.75%; //7px
+    }
+
+}
+a{
+    // transition: $transition-primary;
+    text-decoration: none;
+}
+
+section{
+    padding: 8rem 0;
+
+    @include res(sm){
+        padding: 5.4rem 0;
+    }
+}
+
+
