@@ -1,0 +1,19 @@
+.marquee{
+    width: 100vw;
+    height: 20vh;
+    background-color: #D9D9D9;
+    color: dimgrey;
+}
+
+.marquee-content{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling{
+    0% { transform: translateX(100vw);}
+    100% { transform: translateX(-200vw);}
+}
+
