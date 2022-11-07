@@ -1,0 +1,42 @@
+.why-to-invest{
+    height: 100vh;
+    .why{
+        &-heading{
+            &-1{
+                font-size: 7.2rem;
+                color:$color-black;
+                letter-spacing: -0.2rem;
+            }
+            &-2{
+                font-size: 16rem;
+                margin-top: -3.2rem;
+                text-align: center;
+                color: $medium-gray;
+                font-style: italic;
+                letter-spacing: -0.3rem;
+            }
+        }
+
+        &-content{
+
+            text-align: center;
+            margin-top: 12rem;
+            &-subtext{
+                font-size: 3.2rem;
+                font-weight: 300;
+                color: rgba(#1A1A1A,0.6);
+            }
+            &-text{
+                font-size: 7.2rem;
+                font-weight: 200;
+                letter-spacing: -0.4rem;
+                color: rgba(#1A1A1A,0.6);
+                span{
+                    font-style: italic;
+                    color: $color-black;
+                    letter-spacing: -0.1rem;
+                }
+            }
+        }
+    }
+}

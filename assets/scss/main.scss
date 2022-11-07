@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Rubik:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@200;300;400&display=swap');
 
 @import "../vendors/bootstrap/scss/functions";
 
@@ -39,6 +39,10 @@
 @import "components/forms";
 @import "components/slider";
 @import "components/marquee";
+@import "components/link-card";
 
 @import "layouts/header";
 @import "layouts/hero-section";
+@import "layouts/feature-section";
+@import "layouts/why-section";
+@import "layouts/footer";

@@ -1,0 +1,43 @@
+.link-card{
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-white;
+    &-text{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        img{
+            @include square(3.6rem);
+
+        }
+        p{
+            font-size: 3.2rem;
+            font-weight: 200;
+            margin: 0;
+        }
+    }
+    .redirect-icon{
+        @include square(3.2rem);
+        align-self: flex-end;
+    }
+    &.reddit-card{
+        border-top-right-radius: 6rem;
+    }
+    &.twitter-card{
+        border-bottom-right-radius: 6rem;
+    }
+    &.discord-card{
+        border-bottom-left-radius: 6rem;
+    }
+    &.telegram-card{
+        border-top-left-radius: 6rem;
+    }
+    
+}
+
+.links-section{
+        background-color: #F7F7F7;
+}

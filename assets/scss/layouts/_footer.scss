@@ -1,0 +1,39 @@
+.footer{
+    padding: 3.2rem 0;
+    p{
+        margin-bottom: 0;
+    }
+    &-body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-contact{
+        align-items: center;
+        display: flex;
+        gap: 5rem;
+        span{
+            font-weight: 200;
+        }
+
+        font-weight: 400;
+    }
+
+    &-copy{
+        font-weight: 300;
+    }
+    
+
+    .social-icons{
+        display: flex;
+        gap: 2rem;
+
+        p{
+            gap: 1.2rem;
+            svg{
+                @include square(2.4rem);
+            }
+        }
+        
+    }
+}

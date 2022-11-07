@@ -1,0 +1,48 @@
+.features{
+    &-section{
+        height: 100vh;
+    }
+    &-menu{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        list-style: none;
+    }
+    &-link{
+        font-family: 'DM Serif Display', serif;
+        color: $medium-gray;
+        font-size: 2.4rem;
+        line-height: 1;
+        font-style: italic;
+
+        &.active{
+            font-size: 16rem;
+        }
+    }
+
+    &-circle-bg{
+     @include circle(60rem);
+        @include absolute-center;
+        z-index: -1;
+        background-color: rgba($light-gray,0.1);
+    }
+    &-body{
+        margin-top: 5rem;
+        position: relative;
+
+        &-menu{
+                width: 20rem;
+        }
+        &-content{
+            position: absolute;
+            text-align: center;
+            top: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .text-heading{
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

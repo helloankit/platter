@@ -1,19 +1,47 @@
+:root{
+    --marquee-width: 100vw;
+    --marquee-height: 12vh;
+    --marquee-elements: 5;
+    --marquee--elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width)/var(--marquee--elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements)*2s);
+}
+
 .marquee{
-    width: 100vw;
-    height: 20vh;
-    background-color: #D9D9D9;
-    color: dimgrey;
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #E9E9E9;
+    color: $color-black;
+    overflow: hidden;
+    position: relative;
 }
 
 .marquee-content{
     list-style: none;
     height: 100%;
     display: flex;
-    animation: scrolling 10s linear infinite;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+    @keyframes scrolling{
+        0% { transform: translateX(5vw);}
+        100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements)));}
+    }
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--marquee-element-width);
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    white-space: nowrap;
 }
 
-@keyframes scrolling{
-    0% { transform: translateX(100vw);}
-    100% { transform: translateX(-200vw);}
-}
-
+@media (max-width: 400px) {
+    html {font-size: 1.2rem;}
+    :root{
+        --marquee-width: 100vw;
+        --marquee-height: 12vh;
+        --marquee-elements-displayed: 3;
+    }
+    }

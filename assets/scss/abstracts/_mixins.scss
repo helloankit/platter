@@ -23,6 +23,12 @@
     left: 0;
     top:0;
 }
+@mixin absolute-center{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
 //MEDIA QUERY MANAGER - (takes the size of the screen and return the media query code)
 
 @mixin res($break-point){

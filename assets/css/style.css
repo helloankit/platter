@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Rubik:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@200;300;400&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -4669,7 +4669,8 @@ a {
   text-decoration: none; }
 
 section {
-  padding: 8rem 0; }
+  padding: 8rem 0;
+  position: relative; }
   @media (max-width: 47.99em) {
     section {
       padding: 5.4rem 0; } }
@@ -4677,12 +4678,18 @@ section {
 * {
   font-family: 'Lexend', sans-serif; }
 
+p, a, span, strong, b {
+  font-size: 1.6rem; }
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'DM Serif Display', serif;
   font-weight: 400; }
 
-.f-primary {
+.f-heading {
   font-family: 'DM Serif Display', serif !important; }
+
+.f-body {
+  font-family: 'Lexend', sans-serif !important; }
 
 .text-500 {
   font-weight: 500; }
@@ -4718,6 +4725,15 @@ h5, .h5 {
 
 .text-right {
   text-align: right; }
+
+.text-heading {
+  font-weight: 700;
+  font-size: 6rem; }
+
+.text-body {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.5; }
 
 .btn-light {
   display: inline-block;
@@ -4786,23 +4802,87 @@ h5, .h5 {
     height: 1px;
     background-color: #000000; }
 
+:root {
+  --marquee-width: 100vw;
+  --marquee-height: 12vh;
+  --marquee-elements: 5;
+  --marquee--elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width)/var(--marquee--elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements)*2s); }
+
 .marquee {
-  width: 100vw;
-  height: 20vh;
-  background-color: #D9D9D9;
-  color: dimgrey; }
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: #E9E9E9;
+  color: #000000;
+  overflow: hidden;
+  position: relative; }
 
 .marquee-content {
   list-style: none;
   height: 100%;
   display: flex;
-  animation: scrolling 10s linear infinite; }
+  animation: scrolling var(--marquee-animation-duration) linear infinite; }
 
 @keyframes scrolling {
   0% {
-    transform: translateX(100vw); }
+    transform: translateX(5vw); }
   100% {
-    transform: translateX(-200vw); } }
+    transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements))); } }
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--marquee-element-width);
+  flex-shrink: 0;
+  font-size: 2.5rem;
+  white-space: nowrap; }
+
+@media (max-width: 400px) {
+  html {
+    font-size: 1.2rem; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 12vh;
+    --marquee-elements-displayed: 3; } }
+
+.link-card {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; }
+  .link-card-text {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem; }
+    .link-card-text img {
+      min-width: 3.6rem;
+      min-height: 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem; }
+    .link-card-text p {
+      font-size: 3.2rem;
+      font-weight: 200;
+      margin: 0; }
+  .link-card .redirect-icon {
+    min-width: 3.2rem;
+    min-height: 3.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    align-self: flex-end; }
+  .link-card.reddit-card {
+    border-top-right-radius: 6rem; }
+  .link-card.twitter-card {
+    border-bottom-right-radius: 6rem; }
+  .link-card.discord-card {
+    border-bottom-left-radius: 6rem; }
+  .link-card.telegram-card {
+    border-top-left-radius: 6rem; }
+
+.links-section {
+  background-color: #F7F7F7; }
 
 .nav-header {
   width: 100%;
@@ -4915,3 +4995,106 @@ h5, .h5 {
     .platter-values .value-text-wrapper .value2-image {
       transform: translate(-20%, 15%);
       z-index: -1; }
+
+.features-section {
+  height: 100vh; }
+
+.features-menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  list-style: none; }
+
+.features-link {
+  font-family: 'DM Serif Display', serif;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 2.4rem;
+  line-height: 1;
+  font-style: italic; }
+  .features-link.active {
+    font-size: 16rem; }
+
+.features-circle-bg {
+  min-width: 60rem;
+  min-height: 60rem;
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: rgba(217, 217, 217, 0.1); }
+
+.features-body {
+  margin-top: 5rem;
+  position: relative; }
+  .features-body-menu {
+    width: 20rem; }
+  .features-body-content {
+    position: absolute;
+    text-align: center;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%); }
+    .features-body-content .text-heading {
+      margin-bottom: 4rem; }
+
+.why-to-invest {
+  height: 100vh; }
+  .why-to-invest .why-heading-1 {
+    font-size: 7.2rem;
+    color: #000000;
+    letter-spacing: -0.2rem; }
+  .why-to-invest .why-heading-2 {
+    font-size: 16rem;
+    margin-top: -3.2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.2);
+    font-style: italic;
+    letter-spacing: -0.3rem; }
+  .why-to-invest .why-content {
+    text-align: center;
+    margin-top: 12rem; }
+    .why-to-invest .why-content-subtext {
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: rgba(26, 26, 26, 0.6); }
+    .why-to-invest .why-content-text {
+      font-size: 7.2rem;
+      font-weight: 200;
+      letter-spacing: -0.4rem;
+      color: rgba(26, 26, 26, 0.6); }
+      .why-to-invest .why-content-text span {
+        font-style: italic;
+        color: #000000;
+        letter-spacing: -0.1rem; }
+
+.footer {
+  padding: 3.2rem 0; }
+  .footer p {
+    margin-bottom: 0; }
+  .footer-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer-contact {
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    font-weight: 400; }
+    .footer-contact span {
+      font-weight: 200; }
+  .footer-copy {
+    font-weight: 300; }
+  .footer .social-icons {
+    display: flex;
+    gap: 2rem; }
+    .footer .social-icons p {
+      gap: 1.2rem; }
+      .footer .social-icons p svg {
+        min-width: 2.4rem;
+        min-height: 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem; }
