@@ -4720,6 +4720,9 @@ h5, .h5 {
   font-size: 2.5rem;
   line-height: 2rem; }
 
+span {
+  font-size: inherit; }
+
 .text-left {
   text-align: left; }
 
@@ -4960,14 +4963,14 @@ h5, .h5 {
 .platter-values {
   background-color: rgba(217, 217, 217, 0.2); }
   .platter-values .value-heading-1 {
-    font-size: 9rem; }
+    font-size: 9rem;
+    line-height: 50%; }
   .platter-values .value-heading-2 {
     text-align: right;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #000000;
     font-style: italic;
-    font-size: 16rem;
-    transform: translate(-8%, -30%); }
+    font-size: 16rem; }
   .platter-values .value-points-wrapper {
     margin-top: 8rem; }
   .platter-values .value-text-wrapper {
@@ -4985,10 +4988,14 @@ h5, .h5 {
       letter-spacing: -0.05rem;
       z-index: 2;
       position: relative; }
+    .platter-values .value-text-wrapper .value-text {
+      z-index: 20;
+      position: relative; }
     .platter-values .value-text-wrapper .value-image {
       height: 28rem;
       width: 60%;
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      transition-delay: 1s; }
     .platter-values .value-text-wrapper .value1-image, .platter-values .value-text-wrapper .value3-image {
       transform: translate(-20%, -15%);
       z-index: -1; }
@@ -4997,7 +5004,7 @@ h5, .h5 {
       z-index: -1; }
 
 .features-section {
-  height: 100vh; }
+  position: relative; }
 
 .features-menu {
   display: flex;
@@ -5010,7 +5017,8 @@ h5, .h5 {
   color: rgba(0, 0, 0, 0.2);
   font-size: 2.4rem;
   line-height: 1;
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 0; }
   .features-link.active {
     font-size: 16rem; }
 
@@ -5030,16 +5038,26 @@ h5, .h5 {
 .features-body {
   margin-top: 5rem;
   position: relative; }
+  .features-body-section {
+    padding-top: 50vh;
+    min-height: 100vh; }
   .features-body-menu {
     width: 20rem; }
   .features-body-content {
-    position: absolute;
-    text-align: center;
-    top: 4rem;
-    left: 50%;
-    transform: translateX(-50%); }
+    text-align: center; }
+    .features-body-content .feature-content {
+      opacity: 0;
+      padding: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .features-body-content .feature-content p {
+        transition: all 0.6s cubic-bezier(0.25, 0.75, 0.5, 1.25); }
+        .features-body-content .feature-content p:nth-child(2) {
+          transition-delay: 0.35s; }
     .features-body-content .text-heading {
-      margin-bottom: 4rem; }
+      font-size: 4rem; }
 
 .why-to-invest {
   height: 100vh; }
