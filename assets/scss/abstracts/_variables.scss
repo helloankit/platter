@@ -6,6 +6,7 @@ $btn-white: #F1F1F1;
 $text-gray:#B3B3B3;
 $light-gray: rgba(#D9D9D9,0.2);
 $medium-gray: rgba(#000,0.2);
-$transition-primary:all 0.35s cubic-bezier(.51,.92,.24,1.15);
 $cb-primary:cubic-bezier(.51,.92,.24,1.15);
 $cb-secondary:cubic-bezier(.25,.75,.5,1.25);
+$transition-primary:all 0.35s $cb-primary;
+$transition-secondary:all 0.35s $cb-secondary;

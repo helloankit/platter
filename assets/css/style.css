@@ -5018,9 +5018,14 @@ span {
   font-size: 2.4rem;
   line-height: 1;
   font-style: italic;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  transition: all 0.35s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  transition-duration: 0.7s;
+  transform-origin: left top;
+  transform: translateY(20%); }
   .features-link.active {
-    font-size: 16rem; }
+    font-size: 12rem;
+    transform: translateY(0); }
 
 .features-circle-bg {
   min-width: 60rem;
@@ -5036,18 +5041,19 @@ span {
   background-color: rgba(217, 217, 217, 0.1); }
 
 .features-body {
-  margin-top: 5rem;
+  margin: 5rem 0 8rem;
   position: relative; }
   .features-body-section {
-    padding-top: 50vh;
     min-height: 100vh; }
   .features-body-menu {
     width: 20rem; }
   .features-body-content {
     text-align: center; }
+    .features-body-content > div {
+      margin: 1rem 0; }
     .features-body-content .feature-content {
       opacity: 0;
-      padding: 2rem 0;
+      padding: 2rem 0 6rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -5080,14 +5086,25 @@ span {
       font-weight: 300;
       color: rgba(26, 26, 26, 0.6); }
     .why-to-invest .why-content-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
       font-size: 7.2rem;
       font-weight: 200;
       letter-spacing: -0.4rem;
       color: rgba(26, 26, 26, 0.6); }
-      .why-to-invest .why-content-text span {
+    .why-to-invest .why-content-scrolltext {
+      position: relative; }
+      .why-to-invest .why-content-scrolltext span {
         font-style: italic;
+        font-size: 7.2rem;
+        display: none;
         color: #000000;
         letter-spacing: -0.1rem; }
+        .why-to-invest .why-content-scrolltext span.visible {
+          display: block; }
 
 .footer {
   padding: 3.2rem 0; }

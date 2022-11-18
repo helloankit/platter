@@ -27,14 +27,30 @@
                 color: rgba(#1A1A1A,0.6);
             }
             &-text{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                position: relative;
                 font-size: 7.2rem;
                 font-weight: 200;
                 letter-spacing: -0.4rem;
                 color: rgba(#1A1A1A,0.6);
+                
+            }
+
+            &-scrolltext{
+                position: relative;
                 span{
                     font-style: italic;
+                    font-size: 7.2rem;
+                   display: none;
                     color: $color-black;
                     letter-spacing: -0.1rem;
+
+                    &.visible{
+                        display: block;
+                    }
                 }
             }
         }

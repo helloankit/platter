@@ -54,24 +54,57 @@ document.querySelectorAll(".feature-content").forEach(el => {
   var headingParts = el.getElementsByClassName("text");
 
   gsap.timeline({
-  
     scrollTrigger: {
       trigger: el,
-      scrub:0.3,
-      start: "top center+=20%",
+      scrub:true,
+      start: "top bottom-=5%",
       toggleActions: "play pause resume reverse",
       endTrigger:el,
-      end: "top center-=20%",
+      end: "+=60%",
       // markers: {
       //   indent:30,
       //   startColor: "blue", endColor: "pink"
       // },
     }
-  }).to(el, { opacity: 1, scale: 1, duration:5})
+  }).set(el, { opacity: 0, scale: 0.8, duration:1})
+  .to(el, { opacity: 1, scale:1, duration:5})
   .to(el, { opacity: 0, scale:0.8, duration:1})
   });
-
    
+  const tabs = ["spotlight", "trends", "store"];
+
+  tabs.forEach(tab => {
+    let section = document.querySelector(".feature-body-" + tab);
+    let nav = document.querySelector(".features-link-" + tab);
+    // for class toggling - we'll trigger when it's 40% from the top
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center+=15%",
+      end: "bottom center+=15%",
+      toggleActions: "play pause resume reset",
+      toggleClass: {targets: nav, className: "active"},
+      // markers: {
+      //   indent:200,
+      //   startColor: "blue", endColor: "pink"
+      // },
+      onLeaveBack: (event) => {
+     
+        if(event.vars.trigger.className == "feature-body-spotlight"){
+          //console.log(event.vars.trigger.className);
+          document.querySelector(".features-link-spotlight").classList.add("active");
+        }else {
+          document.querySelector(".features-link-spotlight").classList.remove("active");
+        }
+        
+      },
+      onLeave: (event) => {
+        if(event.vars.trigger.className == "feature-body-store"){
+          document.querySelector(".features-link-store").classList.add("active");
+        }
+        
+      }
+    });
+  });
 
 
 
