@@ -4898,7 +4898,7 @@ span {
   box-shadow: 0 0.8rem 2.4rem 0 #a0a0a02b;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000; }
+  z-index: 500; }
   .nav-header .logo_img {
     width: 10rem;
     height: auto; }
@@ -5065,46 +5065,50 @@ span {
     .features-body-content .text-heading {
       font-size: 4rem; }
 
-.why-to-invest {
-  height: 100vh; }
-  .why-to-invest .why-heading-1 {
+.why-to-invest .why-heading-1 {
+  font-size: 7.2rem;
+  color: #000000;
+  letter-spacing: -0.2rem; }
+
+.why-to-invest .why-heading-2 {
+  font-size: 16rem;
+  margin-top: -3.2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+  letter-spacing: -0.3rem; }
+
+.why-to-invest .why-content {
+  text-align: center;
+  padding: 12rem 0 6rem; }
+  .why-to-invest .why-content-subtext {
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: rgba(26, 26, 26, 0.6); }
+  .why-to-invest .why-content-text {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
     font-size: 7.2rem;
-    color: #000000;
-    letter-spacing: -0.2rem; }
-  .why-to-invest .why-heading-2 {
-    font-size: 16rem;
-    margin-top: -3.2rem;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.2);
-    font-style: italic;
-    letter-spacing: -0.3rem; }
-  .why-to-invest .why-content {
-    text-align: center;
-    margin-top: 12rem; }
-    .why-to-invest .why-content-subtext {
-      font-size: 3.2rem;
-      font-weight: 300;
-      color: rgba(26, 26, 26, 0.6); }
-    .why-to-invest .why-content-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      position: relative;
+    font-weight: 200;
+    letter-spacing: -0.4rem;
+    color: rgba(26, 26, 26, 0.6); }
+  .why-to-invest .why-content-scrolltext {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    width: 17rem; }
+    .why-to-invest .why-content-scrolltext span {
+      opacity: 0;
+      transform: translateY(40px);
+      position: absolute;
+      font-style: italic;
       font-size: 7.2rem;
-      font-weight: 200;
-      letter-spacing: -0.4rem;
-      color: rgba(26, 26, 26, 0.6); }
-    .why-to-invest .why-content-scrolltext {
-      position: relative; }
-      .why-to-invest .why-content-scrolltext span {
-        font-style: italic;
-        font-size: 7.2rem;
-        display: none;
-        color: #000000;
-        letter-spacing: -0.1rem; }
-        .why-to-invest .why-content-scrolltext span.visible {
-          display: block; }
+      color: #000000;
+      letter-spacing: -0.1rem; }
 
 .footer {
   padding: 3.2rem 0; }

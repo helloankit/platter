@@ -1,5 +1,4 @@
 .why-to-invest{
-    height: 100vh;
     .why{
         &-heading{
             &-1{
@@ -18,9 +17,9 @@
         }
 
         &-content{
-
             text-align: center;
-            margin-top: 12rem;
+            padding: 12rem 0 6rem;
+
             &-subtext{
                 font-size: 3.2rem;
                 font-weight: 300;
@@ -29,28 +28,34 @@
             &-text{
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                //align-items: center;
                 gap: 1rem;
                 position: relative;
                 font-size: 7.2rem;
                 font-weight: 200;
                 letter-spacing: -0.4rem;
                 color: rgba(#1A1A1A,0.6);
-                
             }
 
             &-scrolltext{
                 position: relative;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+               margin-left: 0.5rem;
+               width: 17rem;
                 span{
+                    opacity: 0;
+                    transform: translateY(40px);
+                    position: absolute;
                     font-style: italic;
                     font-size: 7.2rem;
-                   display: none;
                     color: $color-black;
                     letter-spacing: -0.1rem;
 
-                    &.visible{
-                        display: block;
-                    }
+                    // &.visible{
+                    //     display: block;
+                    // }
                 }
             }
         }
