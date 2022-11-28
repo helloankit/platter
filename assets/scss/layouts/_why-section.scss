@@ -1,5 +1,8 @@
 .why-to-invest{
-    background-color: $color-dark;
+    background-color: $color-darker;
+    border-top:1px solid rgba($color-white,0.1);
+    
+
     .why{
         &-heading{
             max-width: 90rem;

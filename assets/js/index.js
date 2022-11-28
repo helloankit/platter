@@ -5,6 +5,7 @@ const elements = {
 feather.replace();
 
 gsap.registerPlugin(ScrollTrigger);
+
 elements.headingWrappers.forEach(el => {
   var headingParts = el.getElementsByClassName("heading-animate-part");
   gsap.from(headingParts, {
@@ -19,6 +20,31 @@ elements.headingWrappers.forEach(el => {
     }
   });
 })
+gsap.from(".platter-hero-img", {
+  scale:1.2,
+  opacity:0.25,
+  filter: "blur(10px)",
+  x:0,
+  delay:0.35,
+  duration: 0.7,
+  ease: "power2.out"
+})
+gsap.to(".platter-hero-img", {
+  x: "50%",
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".platter-hero-img",
+    start: "top top",
+    scrub:0.5,
+    toggleActions: "play pause resume reverse",
+    //markers:true
+  }
+})
+var slideranimation = gsap.timeline({ ease: "none", repeat: -1 })
+slideranimation
+.to(".slider-bob", {left:"97%", duration:3})
+.to(".slider-bob", {left:"0%", duration:3})
+
 
 gsap.from(".value-points", {
   y: 25,

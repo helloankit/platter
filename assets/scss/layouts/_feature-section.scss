@@ -8,6 +8,8 @@
         align-items: center;
         gap: 4rem;
         list-style: none;
+        min-height: 19rem;
+        border-bottom: 1px solid $primary-color-light;
     }
     &-link{
         font-family: 'DM Serif Display', serif;

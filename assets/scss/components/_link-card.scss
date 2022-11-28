@@ -5,10 +5,12 @@ $color-discord:#5865F2;
 
 
 .link-card{
-    padding: 2.4rem 3.6rem;
+    padding: 2.4rem;
+    margin: 0 1.6rem;
     display: flex;
     flex-direction: column;
     border: 2px solid transparent;
+    box-sizing:border-box;
     background-color: $color-white;
     &-text{
         display: flex;
@@ -20,7 +22,7 @@ $color-discord:#5865F2;
             @include square(4.2rem);
         }
         p{
-            font-size: 3.6rem;
+            font-size: 2.8rem;
             font-weight: 200;
             margin: 0;
         }
@@ -34,7 +36,7 @@ $color-discord:#5865F2;
     &.reddit-card{
         border-top-right-radius: 6rem;
         background: linear-gradient(71.41deg, rgba(255, 69, 0, 0.3) 0%, rgba(255, 69, 0, 0.03) 100%);
-        border-color: rgba($color-reddit,0.25);
+        border-color: darken($color-reddit,0);
         .redirect-icon{
             color: $color-reddit;
         }
@@ -42,7 +44,7 @@ $color-discord:#5865F2;
     &.twitter-card{
         border-bottom-right-radius: 6rem;
         background: linear-gradient(108.59deg, rgba(85, 172, 238, 0.3) 0%, rgba(85, 172, 238, 0.03) 100%);
-        border-color: rgba($color-twitter,0.25);
+        border-color: darken($color-twitter,0);
         .redirect-icon{
             color: $color-twitter;
         }
@@ -50,7 +52,7 @@ $color-discord:#5865F2;
     &.telegram-card{
         border-bottom-left-radius: 6rem;
         background: linear-gradient(287.95deg, rgba(39, 165, 228, 0.3) -2.9%, rgba(39, 165, 228, 0.03) 100%);
-        border-color: rgba($color-telegram,0.25);
+        border-color: darken($color-telegram,0);
         .redirect-icon{
             color: $color-telegram;
         }
@@ -58,7 +60,7 @@ $color-discord:#5865F2;
     &.discord-card{
         border-top-left-radius: 6rem;
         background: linear-gradient(251.41deg, rgba(88, 101, 242, 0.3) 0%, rgba(88, 101, 242, 0.03) 100%);
-        border-color: rgba($color-discord,0.25);
+        border-color: darken($color-discord,0%);
         .redirect-icon{
             color: $color-discord;
         }
@@ -68,5 +70,5 @@ $color-discord:#5865F2;
 }
 
 .links-section{
-        background-color: lighten($color-dark,5%);
+        background-color: $color-dark;
 }

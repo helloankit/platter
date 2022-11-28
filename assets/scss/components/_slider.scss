@@ -6,14 +6,13 @@
 
     &-bob{
         @include circle(5rem);
-
         border: 1px solid $color-black;
         transform: translateY(-50%);
         background-color: $color-white;
         position: absolute;
         top: 0;
         left: 0;
-        animation: to_and_fro 6s infinite linear;
+        //animation: to_and_fro 4s infinite linear;
     }
     &-line{
         height: 1px;

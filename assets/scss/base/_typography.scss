@@ -7,6 +7,7 @@ p,a,span,strong,b{
 h1,h2,h3,h4,h5,h6{
     font-family: 'DM Serif Display', serif;  
     font-weight: 400;
+    font-style: italic;
 }
 
 .f-heading{
@@ -84,6 +85,10 @@ backdrop-filter: blur(2.5px);
     &-right{
         text-align: right;
     }
+}
+
+.section-heading{
+    margin-bottom: 4rem;
 }
 //animate heading wrapper
 // .heading-wrapper{
