@@ -11,9 +11,12 @@
     }
     &-link{
         font-family: 'DM Serif Display', serif;
-        color: $medium-gray;
+        background: linear-gradient(268.31deg, #7747FF 0%, #5539A3 99.57%)        ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         font-size: 2.4rem;
-        line-height: 1;
+        opacity: 0.45;
         font-style: italic;
         margin-bottom: 0;
         transition: $transition-primary;
@@ -23,6 +26,7 @@
         &.active{
             font-size: 12rem;
             transform: translateY(0);
+            opacity: 1;
         }
 
     }
@@ -67,8 +71,15 @@
                 }
             }
             .text-heading{
-                font-size: 4rem;
+                font-size: 4.8rem;
+                letter-spacing: -0.1rem;
             }
+
+            .text-body{
+                letter-spacing: -0.04rem;
+                font-size: 2.4rem;
+            }
+
         }
     }
 }

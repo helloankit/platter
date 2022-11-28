@@ -54,21 +54,36 @@ h5{
 span{
     font-size: inherit;
 }
-.text-left{
-    text-align: left;
-}
+.text{
+    &-gr{
+        display: inline-block;
+        &-primary{
+            background: linear-gradient(180deg, rgba(62, 205, 250, 0.6) 24.56%, rgba(82, 250, 129, 0.6) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 
-.text-right{
-    text-align: right;
-}
-.text-heading{
+text-shadow: 20px 24px 10px rgba(0, 0, 0, 0.03);
+backdrop-filter: blur(2.5px);
+        }
+    }
+   
+    &-body{
+        font-size: 3.2rem;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    &-heading{
         font-weight: 700;
         font-size: 6rem;
 }
-.text-body{
-    font-size: 3.2rem;
-    font-weight: 300;
-    line-height: 1.5;
+    &-left{
+        text-align: left;
+    }
+    &-right{
+        text-align: right;
+    }
 }
 //animate heading wrapper
 // .heading-wrapper{

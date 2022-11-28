@@ -1,43 +1,72 @@
+$color-reddit:#FF4500;
+$color-twitter:#55ACEE;
+$color-telegram:#29A9EB;
+$color-discord:#5865F2;
+
+
 .link-card{
-    padding: 2.4rem;
+    padding: 2.4rem 3.6rem;
     display: flex;
     flex-direction: column;
-
+    border: 2px solid transparent;
     background-color: $color-white;
     &-text{
         display: flex;
+        color: $color-light;
         align-items: center;
         gap: 2rem;
         margin-bottom: 4rem;
         img{
-            @include square(3.6rem);
-
+            @include square(4.2rem);
         }
         p{
-            font-size: 3.2rem;
+            font-size: 3.6rem;
             font-weight: 200;
             margin: 0;
         }
     }
+
     .redirect-icon{
-        @include square(3.2rem);
+        @include square(4rem);
         align-self: flex-end;
+        font-weight: 200;
     }
     &.reddit-card{
         border-top-right-radius: 6rem;
+        background: linear-gradient(71.41deg, rgba(255, 69, 0, 0.3) 0%, rgba(255, 69, 0, 0.03) 100%);
+        border-color: rgba($color-reddit,0.25);
+        .redirect-icon{
+            color: $color-reddit;
+        }
     }
     &.twitter-card{
         border-bottom-right-radius: 6rem;
-    }
-    &.discord-card{
-        border-bottom-left-radius: 6rem;
+        background: linear-gradient(108.59deg, rgba(85, 172, 238, 0.3) 0%, rgba(85, 172, 238, 0.03) 100%);
+        border-color: rgba($color-twitter,0.25);
+        .redirect-icon{
+            color: $color-twitter;
+        }
     }
     &.telegram-card{
-        border-top-left-radius: 6rem;
+        border-bottom-left-radius: 6rem;
+        background: linear-gradient(287.95deg, rgba(39, 165, 228, 0.3) -2.9%, rgba(39, 165, 228, 0.03) 100%);
+        border-color: rgba($color-telegram,0.25);
+        .redirect-icon{
+            color: $color-telegram;
+        }
     }
+    &.discord-card{
+        border-top-left-radius: 6rem;
+        background: linear-gradient(251.41deg, rgba(88, 101, 242, 0.3) 0%, rgba(88, 101, 242, 0.03) 100%);
+        border-color: rgba($color-discord,0.25);
+        .redirect-icon{
+            color: $color-discord;
+        }
+    }
+
     
 }
 
 .links-section{
-        background-color: #F7F7F7;
+        background-color: lighten($color-dark,5%);
 }

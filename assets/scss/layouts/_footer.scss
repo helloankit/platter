@@ -1,5 +1,7 @@
 .footer{
     padding: 3.2rem 0;
+    background-color: $color-dark;
+    border-top:1px solid rgba($color-white,0.1);
     p{
         margin-bottom: 0;
     }
@@ -12,6 +14,7 @@
         align-items: center;
         display: flex;
         gap: 5rem;
+        color: $color-white;
         span{
             font-weight: 200;
         }
@@ -21,6 +24,7 @@
 
     &-copy{
         font-weight: 300;
+        color: $color-white;
     }
     
 

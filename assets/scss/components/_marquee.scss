@@ -4,37 +4,72 @@
     --marquee-elements: 5;
     --marquee--elements-displayed: 5;
     --marquee-element-width: calc(var(--marquee-width)/var(--marquee--elements-displayed));
-    --marquee-animation-duration: calc(var(--marquee-elements)*2s);
+    --marquee-animation-duration: calc(var(--marquee-elements)*1s);
 }
 
 .marquee{
     width: var(--marquee-width);
-    height: var(--marquee-height);
-    background-color: #E9E9E9;
-    color: $color-black;
+    //height: var(--marquee-height);
+    padding: 3rem 0;
+    background: linear-gradient(99.65deg, #3ECDFA 3.57%, #52FA81 105.01%);
+    transform: rotate(-1.58deg) translateY(-30%);
     overflow: hidden;
     position: relative;
+    white-space: nowrap;
 }
 
-.marquee-content{
-    list-style: none;
-    height: 100%;
-    display: flex;
-    animation: scrolling var(--marquee-animation-duration) linear infinite;
-}
-    @keyframes scrolling{
-        0% { transform: translateX(5vw);}
-        100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements)));}
+// .marquee-content{
+//     list-style: none;
+//     height: 100%;
+//     display: flex;
+// }
+
+.marquee span {
+    display: inline-block;
+    color: $color-white;
+    left: 100%;
+    position: relative;
+    // width: var(--marquee-element-width);
+    // flex-shrink: 0;
+    // flex-basis: 23%;
+    font-size: 3.6rem;
+    font-weight: 300;
+    white-space: nowrap;
+    animation: scrolling 10s linear infinite;
+
+    svg{
+        fill: $color-white;
+        @include square(3.5rem)
     }
 
-.marquee-content li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--marquee-element-width);
-    flex-shrink: 0;
-    font-size: 2.5rem;
-    white-space: nowrap;
+    &:nth-child(1) {
+        animation-delay: 0s;
+    }
+    &:nth-child(2) {
+        animation-delay: 1s;
+    }
+    &:nth-child(3) {
+        animation-delay: 2s;
+    }
+    &:nth-child(4) {
+        animation-delay: 3s;
+    }
+    &:nth-child(5) {
+        animation-delay: 4s;
+    }
+    &:nth-child(6) {
+        animation-delay: 5s;
+    }
+    
+}
+
+@keyframes scrolling{
+
+    0%   { left: 100%; }
+    100% { left: -200%; }
+
+    // 0% { transform: translateX(5vw);}
+    // 100% { transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements)));}
 }
 
 @media (max-width: 400px) {
