@@ -6,9 +6,9 @@
 
     &-bob{
         @include circle(5rem);
-        border: 1px solid $color-black;
+        //border: 1px solid $color-black;
         transform: translateY(-50%);
-        background-color: $color-white;
+        //background-color: $color-white;
         position: absolute;
         top: 0;
         left: 0;

@@ -8,14 +8,18 @@
 .form-input {
     font-family: 'Rubik', serif;
     box-sizing: border-box;
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1.5rem 1.2rem;
     font-weight: 300;
     font-size: 1.6rem;
-    background: $color-white;
-    border: 1px solid #E5E5E5;
+    background: #ffffff;
+    border: 2px solid #E5E5E5;
     border-radius: 1rem;
-    width: 100%;
-    transition: $transition-primary;
+    transition: $transition-secondary;
+    outline: none;
+    &:focus{
+        border-color: $color-primary;
+    }
 
     &::placeholder{
         color: $text-gray;

@@ -26,9 +26,19 @@ gsap.from(".platter-hero-img", {
   filter: "blur(10px)",
   x:0,
   delay:0.35,
-  duration: 0.7,
-  ease: "power2.out"
+  duration: 0.9,
+  ease: "expo.out"
 })
+
+gsap.from(".subscription h5", {
+  y:60,
+  opacity:0,
+  duration: 0.45,
+  delay:0.5,
+  ease: "back.out(1.7)"
+})
+
+
 gsap.to(".platter-hero-img", {
   x: "50%",
   duration: 1,
@@ -42,22 +52,34 @@ gsap.to(".platter-hero-img", {
 })
 var slideranimation = gsap.timeline({ ease: "none", repeat: -1 })
 slideranimation
-.to(".slider-bob", {left:"97%", duration:3})
-.to(".slider-bob", {left:"0%", duration:3})
+.to(".slider-bob", {left:"92%", duration:2})
+.to(".slider-bob", {left:"0%", duration:2})
 
-
-gsap.from(".value-points", {
-  y: 25,
-  opacity: 0,
-  stagger: 0.15,
-  duration: 0.35,
+gsap.timeline({
   scrollTrigger: {
     trigger: ".value-points-wrapper",
-    start: "center bottom",
+    start: "top 65%",
     toggleActions: "play pause resume reverse",
     //markers:true
   }
-})
+}).from(".value-text", {
+  y: 25,
+  opacity: 0,
+  stagger: 0.25,
+  duration: 0.6,
+  ease: "back.out(1.8)"
+}).fromTo(".value-image", {
+  opacity: 0,
+  rotation:5,
+},
+{
+  opacity: 1,
+  rotation:0,
+  stagger: 0.25,
+  duration: 0.55,
+  ease: "back.out(1.7)"
+}, "-=0.6")
+
 
 gsap.set(".features-heading-section", {
   scrollTrigger: {
@@ -71,24 +93,47 @@ gsap.set(".features-heading-section", {
     // },
   }
 })
+gsap.from(".link-card", {
+  y:8,
+  opacity:0,
+  stagger:0.1,
+  filter:"blur(5px)",
+  duration:0.35,
+  scrollTrigger: {
+    trigger:".links-section",
+    start:"top center",
+    toggleActions: "play pause resume reverse",
+  },
 
+})
 document.querySelectorAll(".feature-content").forEach(el => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: el,
-      scrub: true,
-      start: "top bottom-=5%",
-      toggleActions: "play pause resume reverse",
-      endTrigger: el,
-      end: "+=60%",
-      // markers: {
-      //   indent:30,
-      //   startColor: "blue", endColor: "pink"
-      // },
-    }
-  }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
-    .to(el, { opacity: 1, scale: 1, duration: 5 })
-    .to(el, { opacity: 0, scale: 0.8, duration: 1 })
+  if(!(el.classList.contains("feature-content-last"))){
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: true,
+        start: "top bottom-=5%",
+        toggleActions: "play pause resume reverse",
+        endTrigger: el,
+        end: "+=60%"
+      }
+    }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
+      .to(el, { opacity: 1, scale: 1, duration: 5 })
+      .to(el, { opacity: 0, scale: 0.8, duration: 1 })
+  }
+  else{
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: true,
+        start: "top bottom-=5%",
+        toggleActions: "play pause resume reverse",
+        endTrigger: el,
+        end: "+=60%"
+      }
+    }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
+      .to(el, { opacity: 1, scale: 1, duration: 5 })
+  }
 });
 
 const tabs = ["spotlight", "trends", "store"];
@@ -114,13 +159,12 @@ tabs.forEach(tab => {
       } else {
         document.querySelector(".features-link-spotlight").classList.remove("active");
       }
-
     },
     onLeave: (event) => {
       if (event.vars.trigger.className == "feature-body-store") {
+        document.querySelector(".features-link").classList.remove("active");
         document.querySelector(".features-link-store").classList.add("active");
       }
-
     }
   });
 });

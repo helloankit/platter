@@ -18,7 +18,7 @@
         // border-radius: 25rem; 
         z-index: 1;
 
-        background-image: url(/assets/img/hero-grid.svg);
+        background-image: url(../../assets/img/hero-grid.png);
         background-size: 50% ;
         background-position: bottom right;
         @include full-absolute-div;
@@ -97,7 +97,7 @@
 
 .platter-values{
     background-color: $light-gray;
-    background-image: url(/assets/img/paper-bg.jpg);
+    background-image: url(../../assets/img/paper-bg.jpg);
     background-size: 100%;
     .value-heading-1{
         font-size: 9rem;line-height: 50%;
@@ -122,6 +122,7 @@
             letter-spacing: 0;
             font-size: 3.2rem;
             z-index: 2;
+            font-weight: 700;
             position: relative;
         }
 
@@ -139,7 +140,6 @@
         }
         .value-image{
             height: 28rem;
-            transition-delay: 1s;
         }
 
         .value1-image,.value3-image{

@@ -8,10 +8,15 @@ $color-discord:#5865F2;
     padding: 2.4rem;
     margin: 0 1.6rem;
     display: flex;
+    z-index: 4;
+    position: relative;
     flex-direction: column;
     border: 2px solid transparent;
     box-sizing:border-box;
     background-color: $color-white;
+    backdrop-filter: blur(10px);
+    //box-shadow: 3px 10px 19px 4px #0000009c;
+
     &-text{
         display: flex;
         color: $color-light;
@@ -27,6 +32,7 @@ $color-discord:#5865F2;
             margin: 0;
         }
     }
+
 
     .redirect-icon{
         @include square(4rem);
@@ -71,4 +77,14 @@ $color-discord:#5865F2;
 
 .links-section{
         background-color: $color-dark;
+    position: relative;
+    overflow: hidden;
+        .wave-img{
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            width: 110%;
+            transform: translateX(-50%);
+            opacity: 0.6;
+        }
 }

@@ -4758,11 +4758,11 @@ span {
   position: relative;
   font-family: 'Rubik';
   font-weight: 500;
-  font-size: 18px;
-  color: #4C4C4C;
+  font-size: 1.8rem;
+  color: #000000;
   text-align: center;
-  padding: 10px 30px;
-  background: #F1F1F1;
+  padding: 1.5rem 2.4rem;
+  background: linear-gradient(99.65deg, #3ecdfa 3.57%, #52fa81 105.01%);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   transition: all 0.25s ease-in-out;
@@ -4783,14 +4783,17 @@ span {
 .form-input {
   font-family: 'Rubik', serif;
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  width: 100%;
+  padding: 1.5rem 1.2rem;
   font-weight: 300;
   font-size: 1.6rem;
   background: #ffffff;
-  border: 1px solid #E5E5E5;
+  border: 2px solid #E5E5E5;
   border-radius: 1rem;
-  width: 100%;
-  transition: all 0.35s cubic-bezier(0.51, 0.92, 0.24, 1.15); }
+  transition: all 0.35s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  outline: none; }
+  .form-input:focus {
+    border-color: #52FA81; }
   .form-input::placeholder {
     color: #B3B3B3;
     font-size: 1.6rem;
@@ -4809,9 +4812,7 @@ span {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 1px solid #000000;
     transform: translateY(-50%);
-    background-color: #ffffff;
     position: absolute;
     top: 0;
     left: 0; }
@@ -4882,10 +4883,13 @@ span {
   padding: 2.4rem;
   margin: 0 1.6rem;
   display: flex;
+  z-index: 4;
+  position: relative;
   flex-direction: column;
   border: 2px solid transparent;
   box-sizing: border-box;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  backdrop-filter: blur(10px); }
   .link-card-text {
     display: flex;
     color: #F5F5F5;
@@ -4934,7 +4938,16 @@ span {
       color: #5865F2; }
 
 .links-section {
-  background-color: #080B21; }
+  background-color: #080B21;
+  position: relative;
+  overflow: hidden; }
+  .links-section .wave-img {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 110%;
+    transform: translateX(-50%);
+    opacity: 0.6; }
 
 .nav-header {
   width: 100%;
@@ -4961,7 +4974,7 @@ span {
   .hero-section::before {
     content: "";
     z-index: 1;
-    background-image: url(/assets/img/hero-grid.svg);
+    background-image: url(../../assets/img/hero-grid.png);
     background-size: 50%;
     background-position: bottom right;
     position: absolute;
@@ -5026,7 +5039,7 @@ span {
 
 .platter-values {
   background-color: rgba(217, 217, 217, 0.2);
-  background-image: url(/assets/img/paper-bg.jpg);
+  background-image: url(../../assets/img/paper-bg.jpg);
   background-size: 100%; }
   .platter-values .value-heading-1 {
     font-size: 9rem;
@@ -5045,6 +5058,7 @@ span {
       letter-spacing: 0;
       font-size: 3.2rem;
       z-index: 2;
+      font-weight: 700;
       position: relative; }
     .platter-values .value-text-wrapper p {
       font-size: 3.2rem;
@@ -5057,8 +5071,7 @@ span {
       z-index: 20;
       position: relative; }
     .platter-values .value-text-wrapper .value-image {
-      height: 28rem;
-      transition-delay: 1s; }
+      height: 28rem; }
     .platter-values .value-text-wrapper .value1-image, .platter-values .value-text-wrapper .value3-image {
       transform: translate(-20%, -8%);
       z-index: -1; }
