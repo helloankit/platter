@@ -7,28 +7,49 @@
         display: flex;
         align-items: center;
         gap: 4rem;
+        padding-left: 0;
         list-style: none;
         min-height: 19rem;
         border-bottom: 1px solid $primary-color-light;
+        @include res(xs){
+            justify-content: center;
+            gap: 0;
+        }
     }
     &-link{
-        font-family: 'DM Serif Display', serif;
-        background: linear-gradient(268.31deg, #7747FF 0%, #5539A3 99.57%)        ;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 2.4rem;
+        p{
+            font-family: 'DM Serif Display', serif;
+            background: linear-gradient(268.31deg, #7747FF 0%, #5539A3 99.57%)        ;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.4rem;
+            font-style: italic;
+            margin-bottom: 0;
+            transition: $transition-primary;
+            transition-duration: 0.7s;
+            transform-origin: left top;
+            transform: translateY(20%);
+        }
         opacity: 0.45;
-        font-style: italic;
-        margin-bottom: 0;
-        transition: $transition-primary;
-        transition-duration: 0.7s;
-        transform-origin: left top;
-        transform: translateY(20%);
+        @include res(xs){
+            visibility: hidden;
+            width: 0;
+        }
         &.active{
-            font-size: 12rem;
-            transform: translateY(0);
             opacity: 1;
+            p{
+                font-size: 12rem;
+                transform: translateY(0);
+                @include res(xs){
+                    font-size: 9rem;
+                }
+            }
+
+            @include res(xs){
+                visibility: visible;
+                width: auto
+            }
         }
 
     }

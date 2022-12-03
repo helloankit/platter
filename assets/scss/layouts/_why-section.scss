@@ -1,7 +1,9 @@
 .why-to-invest{
     background-color: $color-darker;
     border-top:1px solid rgba($color-white,0.1);
-    
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
 
     .why{
         &-heading{
@@ -19,6 +21,12 @@
                 max-width: 50vw;
                align-self: flex-end;
                 margin-top: -3.2rem;
+
+                @include res(sm){
+                    margin-top: 0;
+
+                    max-width: 40rem;
+                }
             }
         }
 

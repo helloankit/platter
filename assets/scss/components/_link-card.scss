@@ -15,6 +15,9 @@ $color-discord:#5865F2;
     box-sizing:border-box;
     background-color: $color-white;
     backdrop-filter: blur(10px);
+    @include res(lg){
+        margin-bottom: 3rem;
+    }
     //box-shadow: 3px 10px 19px 4px #0000009c;
 
     &-text{
@@ -62,6 +65,10 @@ $color-discord:#5865F2;
         .redirect-icon{
             color: $color-telegram;
         }
+        @include res(sm){
+            border-top-left-radius: 6rem;
+            border-bottom-left-radius:0;
+        }
     }
     &.discord-card{
         border-top-left-radius: 6rem;
@@ -69,6 +76,10 @@ $color-discord:#5865F2;
         border-color: darken($color-discord,0%);
         .redirect-icon{
             color: $color-discord;
+        }
+        @include res(sm){
+            border-bottom-left-radius: 6rem;
+            border-top-left-radius:0;
         }
     }
 
@@ -86,5 +97,11 @@ $color-discord:#5865F2;
             width: 110%;
             transform: translateX(-50%);
             opacity: 0.6;
+
+            @include res(sm){
+                object-fit: cover;
+                object-position: bottom;
+                height: 100%;
+            }
         }
 }

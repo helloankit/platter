@@ -29,16 +29,6 @@ gsap.from(".platter-hero-img", {
   duration: 0.9,
   ease: "expo.out"
 })
-
-gsap.from(".subscription h5", {
-  y:60,
-  opacity:0,
-  duration: 0.45,
-  delay:0.5,
-  ease: "back.out(1.7)"
-})
-
-
 gsap.to(".platter-hero-img", {
   x: "50%",
   duration: 1,
@@ -50,35 +40,54 @@ gsap.to(".platter-hero-img", {
     //markers:true
   }
 })
+gsap.from(".subscription h5", {
+  y:60,
+  opacity:0,
+  duration: 0.45,
+  delay:0.5,
+  ease: "back.out(1.7)"
+})
+
+
+
 var slideranimation = gsap.timeline({ ease: "none", repeat: -1 })
 slideranimation
 .to(".slider-bob", {left:"92%", duration:2})
 .to(".slider-bob", {left:"0%", duration:2})
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".value-points-wrapper",
-    start: "top 65%",
-    toggleActions: "play pause resume reverse",
-    //markers:true
-  }
-}).from(".value-text", {
-  y: 25,
-  opacity: 0,
-  stagger: 0.25,
-  duration: 0.6,
-  ease: "back.out(1.8)"
-}).fromTo(".value-image", {
-  opacity: 0,
-  rotation:5,
-},
-{
-  opacity: 1,
-  rotation:0,
-  stagger: 0.25,
-  duration: 0.55,
-  ease: "back.out(1.7)"
-}, "-=0.6")
+document.querySelectorAll(".value-points").forEach((el,i) => {
+  var text = el.querySelector(".value-text");
+  var img = el.querySelector(".value-image");
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: el,
+      start: "top 65%",
+      toggleActions: "play pause resume reverse",
+      //markers:true
+    }
+  }).from(text, {
+    y: 25,
+    opacity: 0,
+    //stagger: 0.25,
+    duration: 0.6,
+    ease: "back.out(1.8)"
+  }).fromTo(img, {
+    opacity: 0,
+    rotation:5,
+  },
+  {
+    opacity: 1,
+    rotation:0,
+    //stagger: 0.25,
+    duration: 0.55,
+    ease: "back.out(1.7)"
+  }, "-=0.3")
+})
+
+
+
+
+
 
 
 gsap.set(".features-heading-section", {
@@ -114,8 +123,9 @@ document.querySelectorAll(".feature-content").forEach(el => {
         scrub: true,
         start: "top bottom-=5%",
         toggleActions: "play pause resume reverse",
-        endTrigger: el,
-        end: "+=60%"
+        //endTrigger: el,
+        end: "+=60%",
+        markers:true
       }
     }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
       .to(el, { opacity: 1, scale: 1, duration: 5 })
