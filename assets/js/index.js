@@ -125,7 +125,7 @@ document.querySelectorAll(".feature-content").forEach(el => {
         toggleActions: "play pause resume reverse",
         //endTrigger: el,
         end: "+=60%",
-        markers:true
+        //markers:true
       }
     }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
       .to(el, { opacity: 1, scale: 1, duration: 5 })

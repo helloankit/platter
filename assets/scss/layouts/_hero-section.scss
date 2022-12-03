@@ -170,6 +170,9 @@
         .value-text{
             z-index: 20;
             position: relative;
+            @include res(md){
+                text-align: center;
+            }
         }
         .value-image{
             height: 28rem;

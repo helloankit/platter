@@ -5116,6 +5116,9 @@ span {
     .platter-values .value-text-wrapper .value-text {
       z-index: 20;
       position: relative; }
+      @media (max-width: 61.99em) {
+        .platter-values .value-text-wrapper .value-text {
+          text-align: center; } }
     .platter-values .value-text-wrapper .value-image {
       height: 28rem; }
       @media (max-width: 61.99em) {
