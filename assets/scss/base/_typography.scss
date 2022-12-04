@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    font-size: 8.5rem;
+    font-size: 6rem;
     line-height: 1;
     @include res(sm){
         font-size: 7.5rem;
@@ -62,15 +62,21 @@ span{
 .text{
     &-gr{
         display: inline-block;
-        &-primary{
-            background: linear-gradient(180deg, rgba(62, 205, 250, 0.6) 24.56%, rgba(82, 250, 129, 0.6) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
-
+       
 text-shadow: 20px 24px 10px rgba(0, 0, 0, 0.03);
-backdrop-filter: blur(2.5px);
+        &-primary{
+            background: linear-gradient(63deg, rgba(62, 205, 250, 1) 24.56%, rgba(82, 250, 129, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &-secondary{
+            background: linear-gradient(63deg, rgb(119, 71, 255) 0%, rgb(85, 57, 163) 99.57%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
         }
     }
    

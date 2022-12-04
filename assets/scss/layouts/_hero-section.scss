@@ -2,10 +2,15 @@
 .hero-section{
     z-index: 10;
     padding: 12rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
     .container{
         position: relative;
             z-index: 2;
     }
+
     &::before{
         content: "";
         // position: absolute;
@@ -23,7 +28,7 @@
         @include full-absolute-div;
     }
 
-    @include res(sm){
+    @include res(md){
         padding-bottom: 0;
     }
 
@@ -41,27 +46,32 @@
 
 }
 
-.hero-text{
-    width: 75vw;
-    margin-bottom: -5rem;
-
-    @include res(sm){
-        margin-bottom: -1.6rem;
+.hero {
+    &-text{
+        width: 50vw;
+        margin-bottom: -1rem;
+        @include res(md){
+            margin-bottom: -2rem;
+        }
+        @include res(sm){
+            margin-bottom: -1.6rem;
+        }
+    }
+    &-subtext{
+        font-size: 3.2rem;
+        letter-spacing: -0.1rem;
+        margin-bottom: 5rem;
+        font-weight: 400;
+        line-height: 1;
+        color: $text-gray;
+        //text-align: center;
+    
+        @include res(sm){
+            font-size: 4.8rem;
+        }
     }
 }
 
-.hero-subtext{
-    font-size: 6rem;
-    letter-spacing: -0.15rem;
-    margin-bottom: 5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    //text-align: center;
-
-    @include res(sm){
-        font-size: 4.8rem;
-    }
-}
 
 .platter-stamp { 
     @include square(18rem);
@@ -93,26 +103,39 @@
     }
 }
 
-.platter-hero-img{
 
-    position: absolute;
-    right: 0;
-    z-index: 5;
-    bottom: 0;
-    height: calc(100% - 5rem);
-    width: auto;
-    z-index: 0;
-
-    @include res(sm){
-        position: relative;
-        height: auto;
-        margin-top: 6rem;
-        width: 100vw;
+.platter-hero{
+    &-img{
+        position: absolute;
+        right: 0;
+        z-index: 5;
+        bottom: 0;
+        height: calc(100% - 5rem);
+        width: auto;
+        z-index: 0;
+    
+        @include res(md){
+            position: relative;
+            height: auto;
+            margin-top: 6rem;
+            width: 100vw;
+        }
     }
+    &-wave{
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(30%);
+    }
+}
 
+.subscription-button{
+    white-space: nowrap;
+    border-radius: 10rem;
 }
 //values section
-
 .platter-values{
     background-color: $light-gray;
     background-image: url(../../assets/img/paper-bg.jpg);
@@ -121,8 +144,7 @@
         color: $text-dark-gray;
     }
     .value-heading-2{
-        margin-left: auto;
-        margin-top: -4rem;
+        height: 8rem;
         @include res(md){
             width: 40rem;
             margin-left: 0;
@@ -139,12 +161,12 @@
     }
 
     .value-text-wrapper{
-        margin: 0 2rem;
         @include res(md){
             margin: 0 0 3rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            align-items: center;
         }
         h4{
             line-height: 1;
@@ -156,7 +178,7 @@
         }
 
         p{
-            font-size: 3.2rem;
+            font-size: 2.4rem;
             font-weight: 300;
             line-height: 1.2;
             letter-spacing: -0.05rem;
@@ -180,6 +202,7 @@
                 height: auto;
                 width: 35rem;
                 max-width: 75%;
+                transform: translateY(10%);
             }
         }
 

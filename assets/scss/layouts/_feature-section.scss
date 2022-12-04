@@ -9,7 +9,7 @@
         gap: 4rem;
         padding-left: 0;
         list-style: none;
-        min-height: 19rem;
+        min-height: 10rem;
         border-bottom: 1px solid $primary-color-light;
         @include res(xs){
             justify-content: center;
@@ -29,7 +29,6 @@
             transition: $transition-primary;
             transition-duration: 0.7s;
             transform-origin: left top;
-            transform: translateY(20%);
         }
         opacity: 0.45;
         @include res(xs){
@@ -39,8 +38,9 @@
         &.active{
             opacity: 1;
             p{
-                font-size: 12rem;
-                transform: translateY(0);
+                font-size: 3rem;
+                font-weight: 700;
+                transform: translateY(-5%);
                 @include res(xs){
                     font-size: 9rem;
                 }

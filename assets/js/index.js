@@ -29,11 +29,13 @@ gsap.from(".platter-hero-img", {
   duration: 0.9,
   ease: "expo.out"
 })
+var mm = gsap.matchMedia();
+
 gsap.to(".platter-hero-img", {
-  x: "50%",
+  x: "3%",
   duration: 1,
   scrollTrigger: {
-    trigger: ".platter-hero-img",
+    trigger: ".hero-section",
     start: "top top",
     scrub:0.5,
     toggleActions: "play pause resume reverse",
@@ -204,7 +206,7 @@ ScrollTrigger.create({
   animation: scrollAnimation,
   //markers:true,
   delay: 1,
-  toggleActions: "play pause resume reset",
+  toggleActions: "play pause resume resume",
 });
 
 

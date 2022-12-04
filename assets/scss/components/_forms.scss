@@ -3,17 +3,21 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border: 1.2px solid rgb(233, 233, 233);
+  border-radius: 10rem;
+  padding: 0.4rem;/* will have no effect */
+
 }
 
 .form-input {
     font-family: 'Rubik', serif;
     box-sizing: border-box;
     width: 100%;
-    padding: 1.5rem 1.2rem;
+    padding: 1.5rem 2rem;
     font-weight: 300;
     font-size: 1.6rem;
-    background: #ffffff;
-    border: 2px solid #E5E5E5;
+    background: transparent;
+    border: none;
     border-radius: 1rem;
     transition: $transition-secondary;
     outline: none;
