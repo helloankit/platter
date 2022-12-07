@@ -148,7 +148,7 @@ document.querySelectorAll(".feature-content").forEach(el => {
         start: "top bottom-=5%",
         toggleActions: "play pause resume reverse",
         endTrigger: el,
-        end: "+=60%"
+        end: "+=70%"
       }
     }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
       .to(el, { opacity: 1, scale: 1, duration: 5 })
@@ -163,8 +163,8 @@ tabs.forEach(tab => {
   // for class toggling - we'll trigger when it's 40% from the top
   ScrollTrigger.create({
     trigger: section,
-    start: "top center+=15%",
-    end: "bottom center+=15%",
+    start: "top center+=5%",
+    end: "bottom center+=5%",
     toggleActions: "play pause resume reset",
     toggleClass: { targets: nav, className: "active" },
     // markers: {

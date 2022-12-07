@@ -5128,14 +5128,16 @@ span {
   gap: 10rem;
   padding-left: 0;
   list-style: none;
-  min-height: 8rem;
-  border-bottom: 1px solid #D9D9D9; }
+  min-height: 8rem; }
   @media (max-width: 35.99em) {
     .features-menu {
       justify-content: center;
       gap: 0; } }
 
 .features-link {
+  padding: 0.8rem 4rem;
+  background: transparent;
+  border: 1.2px solid transparent;
   opacity: 0.45; }
   .features-link p {
     font-family: 'DM Serif Display', serif;
@@ -5143,7 +5145,7 @@ span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     font-style: italic;
     margin-bottom: 0;
     transition: all 0.35s cubic-bezier(0.51, 0.92, 0.24, 1.15);
@@ -5154,7 +5156,10 @@ span {
       visibility: hidden;
       width: 0; } }
   .features-link.active {
-    opacity: 1; }
+    opacity: 1;
+    border-color: #52fa81;
+    background: linear-gradient(63deg, rgba(62, 205, 250, 0.15) 24.56%, rgba(82, 250, 129, 0.2) 100%);
+    border-radius: 5rem; }
     .features-link.active p {
       font-size: 3rem;
       font-weight: 700;
@@ -5180,8 +5185,11 @@ span {
   z-index: -1;
   background-color: rgba(217, 217, 217, 0.1); }
 
+.features-heading-section {
+  padding: 8rem 0 4rem; }
+
 .features-body {
-  margin: 5rem 0 8rem;
+  margin: 5rem 0 7rem;
   position: relative; }
   .features-body-section {
     min-height: 100vh; }
@@ -5204,10 +5212,20 @@ span {
           transition-delay: 0.35s; }
     .features-body-content .text-heading {
       font-size: 4.8rem;
-      letter-spacing: -0.1rem; }
+      letter-spacing: -0.15rem;
+      display: inline-block;
+      font-weight: 400;
+      background: linear-gradient(63deg, #3ecdfa 24.56%, #52fa81 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent; }
     .features-body-content .text-body {
       letter-spacing: -0.04rem;
-      font-size: 2.4rem; }
+      font-size: 2.4rem;
+      color: #383838 !important;
+      line-height: 1.2;
+      font-weight: 600; }
 
 .why-to-invest {
   background-color: #01030f;
@@ -5275,7 +5293,7 @@ span {
 .platter-values {
   background-color: rgba(217, 217, 217, 0.2);
   background-image: url(../../assets/img/paper-bg.webp);
-  background-size: 100%; }
+  background-size: 60%; }
   .platter-values .value-heading-1 {
     color: #434343; }
   .platter-values .value-heading-2 {
