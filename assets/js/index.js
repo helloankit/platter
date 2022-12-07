@@ -42,6 +42,18 @@ gsap.to(".platter-hero-img", {
     //markers:true
   }
 })
+
+gsap.to(".platter-stamp", {
+  rotate: "90deg",
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    scrub:0.35,
+    toggleActions: "play pause resume reverse",
+    //markers:true
+  }
+})
 gsap.from(".subscription h5", {
   y:60,
   opacity:0,
@@ -58,39 +70,34 @@ slideranimation
 .to(".slider-bob", {left:"0%", duration:2})
 
 document.querySelectorAll(".value-points").forEach((el,i) => {
-  var text = el.querySelector(".value-text");
-  var img = el.querySelector(".value-image");
   gsap.timeline({
     scrollTrigger: {
       trigger: el,
       start: "top 65%",
+      
       toggleActions: "play pause resume reverse",
       //markers:true
     }
-  }).from(text, {
+  }).from(el, {
     y: 25,
     opacity: 0,
+    delay: i*0.2,
     //stagger: 0.25,
     duration: 0.6,
     ease: "back.out(1.8)"
-  }).fromTo(img, {
-    opacity: 0,
-    rotation:5,
-  },
-  {
-    opacity: 1,
-    rotation:0,
-    //stagger: 0.25,
-    duration: 0.55,
-    ease: "back.out(1.7)"
-  }, "-=0.3")
+  })
+  // .fromTo(img, {
+  //   opacity: 0,
+  //   rotation:5,
+  // },
+  // {
+  //   opacity: 1,
+  //   rotation:0,
+  //   //stagger: 0.25,
+  //   duration: 0.55,
+  //   ease: "back.out(1.7)"
+  // }, "-=0.3")
 })
-
-
-
-
-
-
 
 gsap.set(".features-heading-section", {
   scrollTrigger: {
@@ -126,12 +133,12 @@ document.querySelectorAll(".feature-content").forEach(el => {
         start: "top bottom-=5%",
         toggleActions: "play pause resume reverse",
         //endTrigger: el,
-        end: "+=60%",
+        end: "+=70%",
         //markers:true
       }
-    }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
+    }).set(el, { opacity: 0, scale: 0.65, duration: 1 })
       .to(el, { opacity: 1, scale: 1, duration: 5 })
-      .to(el, { opacity: 0, scale: 0.8, duration: 1 })
+      .to(el, { opacity: 0, scale: 0.65, duration: 1 })
   }
   else{
     gsap.timeline({

@@ -27,6 +27,10 @@ h1,h2,h3,h4,h5,h6{
 .text-400{
     font-weight: 400;
 }
+.text-gray{
+    color: $text-gray !important;
+}
+
 
 h1{
     font-size: 6rem;
@@ -73,6 +77,13 @@ text-shadow: 20px 24px 10px rgba(0, 0, 0, 0.03);
         }
         &-secondary{
             background: linear-gradient(63deg, rgb(119, 71, 255) 0%, rgb(85, 57, 163) 99.57%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &-tertiary{
+            background:linear-gradient(99.65deg, #FF5845 3.57%, #F028F8 105.01%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;

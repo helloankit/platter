@@ -1,0 +1,104 @@
+//values section
+.platter-values{
+    background-color: $light-gray;
+    background-image: url(../../assets/img/paper-bg.webp);
+    background-size: 100%;
+    .value-heading-1{
+        color: $text-dark-gray;
+    }
+    .value-heading-2{
+        height: 8rem;
+        @include res(md){
+            width: 40rem;
+            margin-left: 0;
+        }
+        @include res(sm){
+            max-width: 80%;
+            margin-top: 0;
+        }
+    }
+
+
+    .value-points-wrapper{
+        margin-top: 8rem;
+    }
+
+    .value-text-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        @include res(md){
+            margin: 0 0 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        h4{
+            line-height: 1;
+            letter-spacing: 0;
+            font-size: 3.2rem;
+            z-index: 2;
+            font-weight: 700;
+            position: relative;
+        }
+
+        p{
+            font-size: 2.4rem;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.05rem;
+            z-index: 2;
+            position: relative;
+
+            @include res(md){
+                font-size: 2.8rem;
+            }
+        }
+        .value-text{
+            z-index: 20;
+            position: relative;
+            @include res(md){
+                text-align: center;
+            }
+        }
+        .value-image{
+            height: 30rem;
+            @include res(md){
+                height: auto;
+                width: 35rem;
+                max-width: 75%;
+                //transform: translateY(10%);
+            }
+        }
+
+       
+
+        .value1-image,.value3-image{
+            //transform: translate(-20%,-8%);
+            z-index: -1;
+            @include res(md){
+                z-index: 0;
+                transform: none;
+            }
+        }
+        .value2-image{
+            //transform: translate(-20%,8%);
+            z-index: -1;
+            @include res(md){
+                z-index: 0;
+            }
+
+        }
+    }
+    @include res(md){
+        .value-1,.value-3 {
+            .value-text-wrapper{
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+

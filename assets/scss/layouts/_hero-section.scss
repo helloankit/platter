@@ -1,11 +1,15 @@
 
 .hero-section{
     z-index: 10;
-    padding: 12rem 0;
+    padding: 12rem 0 35rem;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     //justify-content: space-between;
+
+
     .container{
         position: relative;
             z-index: 2;
@@ -23,7 +27,7 @@
         // border-radius: 25rem; 
         z-index: 1;
         background-image: url(../../assets/img/hero-grid.png);
-        background-size: 50% ;
+        background-size: 35%;
         background-position: bottom right;
         @include full-absolute-div;
     }
@@ -75,21 +79,23 @@
 
 .platter-stamp { 
     @include square(18rem);
-    animation: rotate_circle 4s infinite linear;
+    //animation: rotate_circle 4s infinite linear;
+    //transform: translateY(50%);
     position: absolute;
-    right: 7%;
-    bottom: 4%;
-    z-index: 5;
+    
+    left: -4%;
+    bottom: 10%;
     img{
    width: 100%;
    height: 100%;
-   z-index: 2;
+   z-index: 0;
     }
+
 
     &-inner{
         position: absolute;
         top: 50%;
-        z-index: 5;
+        z-index: 0;
         left: 50%;
         transform: translate(-50%,-50%);
         @include circle(67%);
@@ -106,6 +112,7 @@
 
 .platter-hero{
     &-img{
+        //display: none;
         position: absolute;
         right: 0;
         z-index: 5;
@@ -121,116 +128,30 @@
             width: 100vw;
         }
     }
-    &-wave{
+    &-sphere{
         position: absolute;
-        right: 0;
-        z-index: -1;
+        left: 50%;
         bottom: 0;
-        width: 100%;
-        transform: translateY(30%);
+        width: 78vw;
+        transform: translate(-50%, 80%) rotate(193deg);
+        z-index: 2;
+        &-bg{
+            z-index: 0;
+            width: 100vw;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            opacity: 0.7;
+        }
     }
 }
+.subscription{
+    position: relative;
+    z-index: 30;
 
+}
 .subscription-button{
     white-space: nowrap;
     border-radius: 10rem;
-}
-//values section
-.platter-values{
-    background-color: $light-gray;
-    background-image: url(../../assets/img/paper-bg.jpg);
-    background-size: 100%;
-    .value-heading-1{
-        color: $text-dark-gray;
-    }
-    .value-heading-2{
-        height: 8rem;
-        @include res(md){
-            width: 40rem;
-            margin-left: 0;
-        }
-        @include res(sm){
-            max-width: 80%;
-            margin-top: 0;
-        }
-    }
-
-
-    .value-points-wrapper{
-        margin-top: 8rem;
-    }
-
-    .value-text-wrapper{
-        @include res(md){
-            margin: 0 0 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-        h4{
-            line-height: 1;
-            letter-spacing: 0;
-            font-size: 3.2rem;
-            z-index: 2;
-            font-weight: 700;
-            position: relative;
-        }
-
-        p{
-            font-size: 2.4rem;
-            font-weight: 300;
-            line-height: 1.2;
-            letter-spacing: -0.05rem;
-            z-index: 2;
-            position: relative;
-
-            @include res(md){
-                font-size: 2.8rem;
-            }
-        }
-        .value-text{
-            z-index: 20;
-            position: relative;
-            @include res(md){
-                text-align: center;
-            }
-        }
-        .value-image{
-            height: 28rem;
-            @include res(md){
-                height: auto;
-                width: 35rem;
-                max-width: 75%;
-                transform: translateY(10%);
-            }
-        }
-
-       
-
-        .value1-image,.value3-image{
-            transform: translate(-20%,-8%);
-            z-index: -1;
-            @include res(md){
-                z-index: 0;
-                transform: none;
-            }
-        }
-        .value2-image{
-            transform: translate(-20%,8%);
-            z-index: -1;
-            @include res(md){
-                z-index: 0;
-            }
-
-        }
-    }
-    @include res(md){
-        .value-1,.value-3 {
-            .value-text-wrapper{
-                flex-direction: column-reverse;
-            }
-        }
-    }
 }
 

@@ -87,7 +87,7 @@ $color-discord:#5865F2;
 }
 
 .links-section{
-        background-color: $color-dark;
+        background-color: $color-darker;
     position: relative;
     overflow: hidden;
         .wave-img{
@@ -97,6 +97,7 @@ $color-discord:#5865F2;
             width: 110%;
             transform: translateX(-50%);
             opacity: 0.6;
+            display: none;
 
             @include res(sm){
                 object-fit: cover;

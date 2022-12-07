@@ -6,10 +6,11 @@
     &-menu{
         display: flex;
         align-items: center;
-        gap: 4rem;
+        justify-content: center;
+        gap: 10rem;
         padding-left: 0;
         list-style: none;
-        min-height: 10rem;
+        min-height: 8rem;
         border-bottom: 1px solid $primary-color-light;
         @include res(xs){
             justify-content: center;
@@ -27,7 +28,7 @@
             font-style: italic;
             margin-bottom: 0;
             transition: $transition-primary;
-            transition-duration: 0.7s;
+            transition-duration: 0.5s;
             transform-origin: left top;
         }
         opacity: 0.45;
