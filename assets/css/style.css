@@ -5004,7 +5004,7 @@ span {
 
 .hero-section {
   z-index: 10;
-  padding: 12rem 0 35rem;
+  padding: 15rem 0 35rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -5100,7 +5100,7 @@ span {
   left: 50%;
   bottom: 0;
   width: 78vw;
-  transform: translate(-50%, 80%) rotate(193deg);
+  transform: translate(-50%, 75%) rotate(193deg);
   z-index: 2; }
   .platter-hero-sphere-bg {
     z-index: 0;
@@ -5108,7 +5108,7 @@ span {
     position: absolute;
     left: 0;
     bottom: 0;
-    opacity: 0.7; }
+    opacity: 0.4; }
 
 .subscription {
   position: relative;
@@ -5138,6 +5138,8 @@ span {
   padding: 0.8rem 4rem;
   background: transparent;
   border: 1.2px solid transparent;
+  cursor: pointer;
+  z-index: 10;
   opacity: 0.45; }
   .features-link p {
     font-family: 'DM Serif Display', serif;
@@ -5186,7 +5188,8 @@ span {
   background-color: rgba(217, 217, 217, 0.1); }
 
 .features-heading-section {
-  padding: 8rem 0 4rem; }
+  padding: 8rem 0 4rem;
+  z-index: 10; }
 
 .features-body {
   margin: 5rem 0 7rem;
@@ -5292,8 +5295,8 @@ span {
 
 .platter-values {
   background-color: rgba(217, 217, 217, 0.2);
-  background-image: url(../../assets/img/paper-bg.webp);
-  background-size: 60%; }
+  background-image: url(../../assets/img/paper-bg.jpg);
+  background-size: cover; }
   .platter-values .value-heading-1 {
     color: #434343; }
   .platter-values .value-heading-2 {

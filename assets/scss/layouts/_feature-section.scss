@@ -21,6 +21,8 @@
         padding: 0.8rem 4rem;
         background: transparent;
         border: 1.2px solid transparent;
+        cursor: pointer;
+        z-index: 10;
         p{
             font-family: 'DM Serif Display', serif;
             background: linear-gradient(268.31deg, #7747FF 0%, #5539A3 99.57%)        ;
@@ -70,7 +72,7 @@
     }
     &-heading-section{
         padding: 8rem 0 4rem;
-        
+        z-index: 10;
     }
     &-body{
         margin: 5rem 0 7rem;

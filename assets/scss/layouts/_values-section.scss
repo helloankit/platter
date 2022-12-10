@@ -1,8 +1,9 @@
 //values section
 .platter-values{
     background-color: $light-gray;
-    background-image: url(../../assets/img/paper-bg.webp);
-    background-size:60%;
+    background-image: url(../../assets/img/paper-bg.jpg);
+    background-size:cover;
+
     .value-heading-1{
         color: $text-dark-gray;
     }

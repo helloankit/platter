@@ -4,7 +4,7 @@ const elements = {
 
 feather.replace();
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 elements.headingWrappers.forEach(el => {
   var headingParts = el.getElementsByClassName("heading-animate-part");
@@ -154,6 +154,10 @@ document.querySelectorAll(".feature-content").forEach(el => {
       .to(el, { opacity: 1, scale: 1, duration: 5 })
   }
 });
+
+function goToTabs(section){
+ gsap.to(window, {duration: 0.3, scrollTo:{y:section,offsetY: 280},ease: "none"});
+}
 
 const tabs = ["spotlight", "trends", "store"];
 
