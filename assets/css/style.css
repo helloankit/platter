@@ -44,7 +44,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Montserrat", Roboto,
+  --bs-font-sans-serif: system-ui, -apple-system, "Poppins", Roboto,
     "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
@@ -6427,8 +6427,9 @@ section {
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
-  /* font-family: "Encode Sans", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
 }
 
 /* body {
@@ -6455,21 +6456,22 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Montserrat", sans-serif;
-  /* font-family: "Encode Sans", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
   /* font-family: 'Poppins', sans-serif; */
   font-weight: 700;
 }
 
 .f-heading {
-  font-family: "Montserrat", sans-serif;
-  /* font-family: 'Encode Sans', sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: 'Encode Sans', sans-serif;
   /* font-family: "Poppins", sans-serif; */
 }
 
 .f-body {
-  font-family: "Montserrat", sans-serif;
-  /* font-family: "Encode Sans", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
 }
 
 .text-500 {
@@ -6580,7 +6582,9 @@ span {
 .btn-light {
   display: inline-block;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   color: #000000;
@@ -6614,7 +6618,9 @@ span {
 }
 
 .form-input {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
   box-sizing: border-box;
   width: 100%;
   padding: 1.5rem 2rem;
@@ -6632,7 +6638,9 @@ span {
 .form-input::placeholder {
   color: #383838;
   font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
 }
 
 .submit {
@@ -7059,7 +7067,9 @@ span {
   opacity: 0.45;
 }
 .features-link p { 
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Encode Sans", sans-serif;
   /* color: #000; */
   /* background: linear-gradient(268.31deg, #7747ff 0%, #5539a3 99.57%); */
   /* -webkit-background-clip: text; */
