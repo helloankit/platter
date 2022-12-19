@@ -1,5 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;500;600;700;800&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@500;600;700&display=swap");
 
+@font-face {
+  font-family: 'addington_cf_bold';
+  src: url('addingtoncf-bold-webfont.woff2') format('woff2'),
+       url('addingtoncf-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'addington_cfdemi_bold';
+  src: url('addingtoncf-demibold-webfont.woff2') format('woff2'),
+       url('addingtoncf-demibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'addington_cfextra_bold';
+  src: url('addingtoncf-extrabold-webfont.woff2') format('woff2'),
+       url('addingtoncf-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'addington_cfmedium';
+  src: url('addingtoncf-medium-webfont.woff2') format('woff2'),
+       url('addingtoncf-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'addington_cf_regular';
+  src: url('addingtoncf-regular-webfont.woff2') format('woff2'),
+       url('addingtoncf-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -44,7 +85,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Montserrat", Roboto,
+  --bs-font-sans-serif: system-ui, -apple-system, "addington_cfmedium", Roboto,
     "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
@@ -6427,8 +6468,12 @@ section {
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "addington_cf_bold";
   /* font-family: "Encode Sans", sans-serif; */
+}
+
+p{
+  font-family: "Poppins", sans-serif;
 }
 
 /* body {
@@ -6455,20 +6500,20 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "addington_cfdemi_bold";
   /* font-family: "Encode Sans", sans-serif; */
   /* font-family: 'Poppins', sans-serif; */
   font-weight: 700;
 }
 
 .f-heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: "addington_cfdemi_bold";
   /* font-family: 'Encode Sans', sans-serif; */
   /* font-family: "Poppins", sans-serif; */
 }
 
 .f-body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "addington_cf_regular";
   /* font-family: "Encode Sans", sans-serif; */
 }
 
@@ -6580,7 +6625,7 @@ span {
 .btn-light {
   display: inline-block;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   color: #000000;
@@ -6594,6 +6639,7 @@ span {
   z-index: 100;
   cursor: pointer;
 }
+
 .btn-light:hover {
   transform: translateY(-1px);
 }
@@ -6927,6 +6973,7 @@ span {
 }
 
 .hero-subtext {
+  font-family: 'addington_cf_regular';
   font-size: 3.2rem;
   letter-spacing: -0.1rem;
   margin-bottom: 5rem;
@@ -7059,7 +7106,7 @@ span {
   opacity: 0.45;
 }
 .features-link p { 
-  font-family: "Montserrat", sans-serif;
+  font-family: "addington_cfdemi_bold";
   /* color: #000; */
   /* background: linear-gradient(268.31deg, #7747ff 0%, #5539a3 99.57%); */
   /* -webkit-background-clip: text; */
