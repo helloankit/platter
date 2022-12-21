@@ -1,42 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;500;600;700;800&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;500;600;700;800&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 @font-face {
-  font-family: 'addington_cf_bold';
-  src: url('addingtoncf-bold-webfont.woff2') format('woff2'),
-       url('addingtoncf-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'addington_cfdemi_bold';
-  src: url('addingtoncf-demibold-webfont.woff2') format('woff2'),
-       url('addingtoncf-demibold-webfont.woff') format('woff');
+  font-family: "addington_cf_bold";
+  src: url("addingtoncf-bold-webfont.woff2") format("woff2"),
+    url("addingtoncf-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'addington_cfextra_bold';
-  src: url('addingtoncf-extrabold-webfont.woff2') format('woff2'),
-       url('addingtoncf-extrabold-webfont.woff') format('woff');
+  font-family: "addington_cfdemi_bold";
+  src: url("addingtoncf-demibold-webfont.woff2") format("woff2"),
+    url("addingtoncf-demibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'addington_cfmedium';
-  src: url('addingtoncf-medium-webfont.woff2') format('woff2'),
-       url('addingtoncf-medium-webfont.woff') format('woff');
+  font-family: "addington_cfextra_bold";
+  src: url("addingtoncf-extrabold-webfont.woff2") format("woff2"),
+    url("addingtoncf-extrabold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'addington_cf_regular';
-  src: url('addingtoncf-regular-webfont.woff2') format('woff2'),
-       url('addingtoncf-regular-webfont.woff') format('woff');
+  font-family: "addington_cfmedium";
+  src: url("addingtoncf-medium-webfont.woff2") format("woff2"),
+    url("addingtoncf-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "addington_cf_regular";
+  src: url("addingtoncf-regular-webfont.woff2") format("woff2"),
+    url("addingtoncf-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -6469,11 +6468,41 @@ section {
 
 * {
   font-family: "addington_cf_bold";
+  color: #fff;
   /* font-family: "Encode Sans", sans-serif; */
 }
 
-p{
+p {
   font-family: "Poppins", sans-serif;
+}
+
+.nav-row>div{
+display: flex;
+flex: 1 1;
+}
+
+.nightModeToggleContainer{
+  flex-direction: row-reverse;
+  color:#222222;
+}
+
+.nightModeToggle{
+  background-color: transparent;
+  padding:0.575rem;
+}
+
+.nightModeToggle>button{
+  border: 0px transparent;
+}
+
+.nightModeToggle:hover{
+  background-color: rgba(255, 255, 255, 0.144);
+  border-radius: 50%;
+}
+
+.nightModeToggleContainer>i{
+  color:#222222;
+  background-color:#222222;
 }
 
 /* body {
@@ -6503,7 +6532,7 @@ h6,
   font-family: "addington_cfdemi_bold";
   /* font-family: "Encode Sans", sans-serif; */
   /* font-family: 'Poppins', sans-serif; */
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .f-heading {
@@ -6781,8 +6810,10 @@ span {
 }
 
 .link-card {
-  padding: 2.4rem;
-  margin: 0 1.6rem;
+  /* padding: 2.4rem; */
+  padding: 1rem;
+  height: 70%;
+  /* margin: 0 1.6rem; */
   display: flex;
   z-index: 4;
   position: relative;
@@ -6804,14 +6835,15 @@ span {
   gap: 2rem;
   margin-bottom: 4rem;
 }
-.link-card-text img {
+.link-card img {
   min-width: 4.2rem;
   min-height: 4.2rem;
   width: 4.2rem;
   height: 4.2rem;
 }
 .link-card-text p {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
+  margin-top:1rem;
   font-weight: 200;
   margin: 0;
 }
@@ -6859,6 +6891,11 @@ span {
 .link-card.telegram-card .redirect-icon {
   color: #29a9eb;
 }
+
+.address-text{
+  font-size: 1.4rem;
+  font-weight: 200;
+}
 @media (max-width: 47.99em) {
   .link-card.telegram-card {
     border-top-left-radius: 6rem;
@@ -6889,6 +6926,11 @@ span {
   position: relative;
   overflow: hidden;
 }
+
+.links-section-padding-top{
+  padding-top:10rem;
+}
+
 .links-section .wave-img {
   position: absolute;
   left: 50%;
@@ -6913,8 +6955,10 @@ span {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0.8rem 2.4rem 0 #a0a0a02b;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* box-shadow: 0 0.8rem 2.4rem 0 #a0a0a02b; */
+  background-color: rgba(19, 19, 19, 0.767);
+  box-shadow: 0 1rem 2.4rem 0 #4949492b;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 500;
@@ -6924,10 +6968,11 @@ span {
   height: auto;
 }
 .hero-section {
-  background-image: url(../../assets/img/hero-bcg.png);
+  /* background-image: url(../../assets/img/hero-bcg.png); */
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  background-color: #121212;
+  /* background-position: center;
+  background-size: cover; */
   z-index: 10;
   padding: 16rem 0 35rem;
   min-height: 100vh;
@@ -6973,13 +7018,14 @@ span {
 }
 
 .hero-subtext {
-  font-family: 'addington_cf_regular';
+  font-family: "addington_cf_regular";
   font-size: 3.2rem;
   letter-spacing: -0.1rem;
   margin-bottom: 5rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
-  color: #383838;
+  /* color: #383838; */
+  color: rgb(199, 199, 199);
 }
 @media (max-width: 47.99em) {
   .hero-subtext {
@@ -7105,7 +7151,7 @@ span {
   z-index: 10;
   opacity: 0.45;
 }
-.features-link p { 
+.features-link p {
   font-family: "addington_cfdemi_bold";
   /* color: #000; */
   /* background: linear-gradient(268.31deg, #7747ff 0%, #5539a3 99.57%); */
@@ -7247,9 +7293,9 @@ span {
   flex-direction: column;
 }
 .why-to-invest .why-heading-1 {
-  font-size: 6.25rem;
+  font-size: 4.5rem;
   color: #ffffff;
-  letter-spacing: -0.2rem;
+  /* letter-spacing: -0.2rem; */
 }
 .hero-title {
   font-size: 9rem;
@@ -7291,7 +7337,8 @@ span {
 }
 
 .heading-small {
-  font-size: 6rem;
+  font-size: 7rem;
+  font-weight: 600;
 }
 
 .heading-medium {
@@ -7299,7 +7346,8 @@ span {
 }
 
 .heading-large {
-  font-size: 9.5rem;
+  font-size: 8rem;
+  font-weight: 600;
 }
 
 .shadow-separator {
@@ -7354,9 +7402,9 @@ span {
 
 .why-to-invest .why-heading-2 {
   width: 100%;
-  max-width: 50vw;
-  align-self: flex-end;
-  margin-top: -2.5rem;
+  /* max-width: 50vw; */
+  /* align-self: flex-end; */
+  /* margin-top: -2.5rem; */
 }
 @media (max-width: 47.99em) {
   .why-to-invest .why-heading-2 {
@@ -7405,7 +7453,10 @@ span {
   background-color: rgba(217, 217, 217, 0.2);
   background-image: url(../../assets/img/paper-bg.jpg);
   background-size: cover;
+  height: 100vh;
+  padding-top: 8%;
 }
+
 .platter-values .value-heading-1 {
   color: #434343;
 }
@@ -7513,6 +7564,9 @@ span {
   padding: 3.2rem 0;
   background-color: #080b21;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  width: 100%;
+  bottom:0;
 }
 .footer p {
   margin-bottom: 0;
