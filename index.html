@@ -18,7 +18,7 @@
   <body>
     <nav class="nav-header" id="websiteNavbar">
       <div class="row px-5 nav-row">
-        <div>
+        <div class="logo-container">
           <a href="./index.html">
             <img
               src="./assets/img/platter_logo.svg"
@@ -26,6 +26,14 @@
               class="logo_img"
             />
           </a>
+        </div>
+        <div class="mt-2 navigation-items">
+          <p>Home</p>
+          <p>Why Platter</p>
+          <p>Our Offerings</p>
+          <p>Contact Us</p>
+          <!-- <p><i data-feather="linkedin"></i></p>
+          <p><i data-feather="twitter"></i></p> -->
         </div>
         <div class="nightModeToggleContainer">
           <button class="nightModeToggle">
@@ -40,32 +48,34 @@
         <div class="hero-section">
           <div class="heading-wrapper">
             <div class="container">
-              <div class="text-center">
-                <!-- <img src="./assets/img/Curated marketplace.svg" class="hero-text heading-animate-part d-none d-sm-inline-block"
-                                  alt="Curated marketplace">
-                                  <img src="./assets/img/Curated marketplace - mobile.svg" class="hero-text heading-animate-part d-inline-block d-sm-none"
-                                  alt="Curated marketplace"> -->
-                <h1
-                  class="hero-title text-gradient text-shine heading-animate-part"
-                >
-                  Curated Marketplace
-                </h1>
-              </div>
-
-              <div class="row justify-content-center heading-animate-part">
-                <div class="col-lg-7">
-                  <p class="hero-subtext text-center">
-                    for DeFi investments <span class="f-heading">& </span>Web3
-                    products
-                  </p>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="text-left">
+                    <h1
+                      class="hero-title text-gradient text-shine heading-animate-part"
+                    >
+                      Curated<br />Marketplace
+                    </h1>
+                  </div>
+                  <div class="row justify-content-center heading-animate-part">
+                    <div class="">
+                      <p class="hero-subtext text-left">
+                        for DeFi investments & Web3 products
+                      </p>
+                      <hr />
+                    </div>
+                    <!-- <div class="rounded-box p-4"> -->
+                    <p class="hero-description">
+                      Platter simplifies and accelerate the adoption of DeFi
+                      investment opportunities and various Web3 products,
+                      through curated aggregation, real-time insights and simple
+                      end-user experience
+                    </p>
+                    <!-- </div> -->
+                  </div>
                 </div>
-                <div class="col-lg-9 text-center">
-                  <p>
-                    Platter simplifies and accelerate the adoption of DeFi
-                    investment opportunities and various Web3 products, through
-                    curated aggregation, real-time insights and simple end-user
-                    experience
-                  </p>
+                <div class="col-md-4 hero-illustration">
+                  <img src="./assets/img/hero-illustration.svg" />
                 </div>
               </div>
             </div>
@@ -90,9 +100,12 @@
               <p class="why-content-subtext">
                 Unlike centralised exchanges we dont hold your funds in your
               </p>
-              <div class="why-content-text">
-                <span> Your </span>
-                <div class="why-content-scrolltext">
+              <div class="why-content-text text-center">
+                <!-- <span> Your </span> -->
+                <h2>Wallet |</h2>
+                <h2>Keys |</h2>
+                <h2>Token</h2>
+                <!-- <div class="why-content-scrolltext">
                   <span
                     class="f-heading scrolltext scrolltext-wallet text-gr text-gr-primary"
                     >Wallet</span
@@ -105,26 +118,26 @@
                     class="f-heading scrolltext scrolltext-token text-gr text-gr-primary"
                     >Token</span
                   >
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
-          <img src="./assets/img/hero-bg.png" alt="" class="bg" />
+          <img src="./assets/img/hero-bg-2.png" alt="" class="bg" />
         </div>
       </section>
 
       <section>
         <div class="platter-values" id="my-sticky-element">
           <div class="container">
-            <div class="heading-wrapper">
+            <div class="heading-wrapper value-wrapper">
               <h2 class="value-heading-1 heading-animate-part py-0">
-                How Platter creates value
+                How Platter creates value for you?
               </h2>
-              <h1
+              <!-- <h1
                 class="heading-small text-gradient-small heading-animate-part pt-0"
               >
                 for you?
-              </h1>
+              </h1> -->
               <!-- <div class="">
                           <img class="value-heading-2 heading-animate-part" src="./assets/img/for You.svg" alt="for you">
                       </div> -->
@@ -141,9 +154,9 @@
                         alt=""
                       />
 
-                      <div class="value-text">
+                      <div class="value-text text-center">
                         <h4>Frictionless solutions</h4>
-                        <p class="text-gray">for intuitive user experience</p>
+                        <p class="text-gray">for simplified user experience</p>
                       </div>
                     </div>
                   </div>
@@ -157,10 +170,10 @@
                         alt=""
                       />
 
-                      <div class="value-text">
-                        <h4>Stay Updated</h4>
+                      <div class="value-text text-center">
+                        <h4>Stay<br/>Updated</h4>
                         <p class="text-gray">
-                          with the evolving Defi ecosystem
+                          with the ever evolving Defi ecosystem
                         </p>
                       </div>
                     </div>
@@ -168,7 +181,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 value-points">
                   <div class="value-2">
-                    <div class="value-text-wrapper">
+                    <div class="value-text-wrapper text-center">
                       <img
                         class="value-image value2-image"
                         src="./assets/img/developer_male.png"
@@ -182,6 +195,25 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="offerings">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                <h2>Spotlight</h2>
+                <hr/>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptates praesentium deserunt exercitationem ipsam dolore quidem explicabo laudantium. Maxime officia in, culpa excepturi magnam soluta ut. Dolore, eligendi! Accusamus, enim?
+                </p>
               </div>
             </div>
           </div>
@@ -386,7 +418,7 @@
   </body>
   <script>
     feather.replace();
-    docSlider.init({ speed: 1000, easing: "ease-in-out" });
+    docSlider.init({ speed: 600, easing: "ease", pager: true });
   </script>
   <!-- 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
