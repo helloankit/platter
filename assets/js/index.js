@@ -2,9 +2,9 @@ const elements = {
   headingWrappers: document.querySelectorAll(".heading-wrapper")
 };
 
-feather.replace();
+feather.replace({ 'stroke-width': 2});
 
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 elements.headingWrappers.forEach(el => {
   var headingParts = el.getElementsByClassName("heading-animate-part");
@@ -16,16 +16,16 @@ elements.headingWrappers.forEach(el => {
       trigger: el,
       start: "top center",
       toggleActions: "play pause resume reverse",
-      //markers: true,
+      // markers: true,
     }
   });
 })
 gsap.from(".platter-hero-img", {
-  scale:1.2,
-  opacity:0.25,
+  scale: 1.2,
+  opacity: 0.25,
   filter: "blur(10px)",
-  x:0,
-  delay:0.35,
+  x: 0,
+  delay: 0.35,
   duration: 0.9,
   ease: "expo.out"
 })
@@ -37,7 +37,7 @@ gsap.to(".platter-hero-img", {
   scrollTrigger: {
     trigger: ".hero-section",
     start: "top top",
-    scrub:0.5,
+    scrub: 0.5,
     toggleActions: "play pause resume reverse",
     //markers:true
   }
@@ -49,16 +49,16 @@ gsap.to(".platter-stamp", {
   scrollTrigger: {
     trigger: ".hero-section",
     start: "top top",
-    scrub:0.35,
+    scrub: 0.35,
     toggleActions: "play pause resume reverse",
     //markers:true
   }
 })
 gsap.from(".subscription h5", {
-  y:60,
-  opacity:0,
+  y: 60,
+  opacity: 0,
   duration: 0.45,
-  delay:0.5,
+  delay: 0.5,
   ease: "back.out(1.7)"
 })
 
@@ -66,22 +66,22 @@ gsap.from(".subscription h5", {
 
 var slideranimation = gsap.timeline({ ease: "none", repeat: -1 })
 slideranimation
-.to(".slider-bob", {left:"92%", duration:2})
-.to(".slider-bob", {left:"0%", duration:2})
+  .to(".slider-bob", { left: "92%", duration: 2 })
+  .to(".slider-bob", { left: "0%", duration: 2 })
 
-document.querySelectorAll(".value-points").forEach((el,i) => {
+document.querySelectorAll(".value-points").forEach((el, i) => {
   gsap.timeline({
     scrollTrigger: {
       trigger: el,
       start: "top 65%",
-      
+
       toggleActions: "play pause resume reverse",
       //markers:true
     }
   }).from(el, {
     y: 25,
     opacity: 0,
-    delay: i*0.2,
+    delay: i * 0.2,
     //stagger: 0.25,
     duration: 0.6,
     ease: "back.out(1.8)"
@@ -104,59 +104,100 @@ gsap.set(".features-heading-section", {
     trigger: ".features-heading-section",
     pin: true,
     pinSpacing: false,
-    endTrigger: ".links-section",
-    end: "top bottom",
+    endTrigger: ".platter-values",
+    end: "top bottom-=50%",
     // markers: {
-    //   indent:100,
+    //   indent: 100,
     // },
   }
 })
-gsap.from(".link-card", {
-  y:8,
-  opacity:0,
-  stagger:0.1,
-  filter:"blur(5px)",
-  duration:0.35,
+
+gsap.set(".feature-content-container", {
   scrollTrigger: {
-    trigger:".links-section",
-    start:"top center",
+    trigger: "#spotlight-img",
+    pin: true,
+    pinSpacing: true,
+    endTrigger: ".feature-body-trends",
+    start: "top-=85%",
+    end: "top bottom-=40%",
+  }
+});
+
+gsap.set(".feature-content-container", {
+  scrollTrigger: {
+    trigger: "#trends-img",
+    pin: true,
+    pinSpacing: true,
+    endTrigger: ".feature-body-store",
+    start: "top-=85%",
+    end: "top bottom-=40%",
+  }
+});
+
+gsap.set(".feature-content-container", {
+  scrollTrigger: {
+    trigger: "#store-img",
+    pin: true,
+    pinSpacing: true,
+    endTrigger: ".platter-values",
+    start: "top-=85%",
+    end: "top bottom-=30%",
+  }
+});
+
+gsap.from(".link-card", {
+  y: 8,
+  opacity: 0,
+  stagger: 0.1,
+  filter: "blur(5px)",
+  duration: 0.35,
+  scrollTrigger: {
+    trigger: ".links-section",
+    start: "top center",
     toggleActions: "play pause resume reverse",
   },
 
 })
 document.querySelectorAll(".feature-content").forEach(el => {
-  if(!(el.classList.contains("feature-content-last"))){
+  if (!(el.classList.contains("feature-content-last"))) {
     gsap.timeline({
       scrollTrigger: {
         trigger: el,
-        scrub: true,
-        start: "top bottom-=5%",
+        scrub: 0.5,
+        start: "top bottom-=15%",
         toggleActions: "play pause resume reverse",
         //endTrigger: el,
         end: "+=70%",
         //markers:true
       }
     }).set(el, { opacity: 0, scale: 0.65, duration: 1 })
-      .to(el, { opacity: 1, scale: 1, duration: 5 })
-      .to(el, { opacity: 0, scale: 0.65, duration: 1 })
+      .to(el, { opacity: 1, scale: 1, duration: 20 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 0.9, duration: 30 })
+      .to(el, { opacity: 0.75, scale: 0.8, duration: 20 })
+      .to(el, { opacity: 0.3, scale: 0.5, duration: 20 })
+      .to(el, { opacity: 0, scale: 0.5, duration: 5 })
+      .to(el, { opacity: 0, scale: 0.3, duration: 2 })
   }
-  else{
+  else {
     gsap.timeline({
       scrollTrigger: {
         trigger: el,
-        scrub: true,
+        scrub: 4,
         start: "top bottom-=5%",
         toggleActions: "play pause resume reverse",
         endTrigger: el,
-        end: "+=70%"
+        end: "+=70%",
+        markers: true
       }
-    }).set(el, { opacity: 0, scale: 0.8, duration: 1 })
-      .to(el, { opacity: 1, scale: 1, duration: 5 })
+    })
   }
 });
 
-function goToTabs(section){
- gsap.to(window, {duration: 0.3, scrollTo:{y:section,offsetY: 280},ease: "none"});
+function goToTabs(section) {
+  gsap.to(window, { duration: 0.3, scrollTo: { y: section, offsetY: 280 }, ease: "none" });
 }
 
 const tabs = ["spotlight", "trends", "store"];

@@ -12,15 +12,25 @@
 
 <body>
     <nav class="nav-header" id="websiteNavbar">
-        <div class="container">
-            <a href="./index.html">
-                <img src="./assets/img/platter_logo.svg" alt="platter" class="logo_img">
-            </a>
-        </div>
-
-        </div>
+        <div class="row px-5 nav-row">
+            <div class="logo-container">
+              <a href="./index.html">
+                <img
+                  src="./assets/img/platter_logo.svg"
+                  alt="platter"
+                  class="logo_img"
+                />
+              </a>
+            </div>
+            <div class="mt-2 navigation-items">
+              <a href="#home">Home</a>
+              <a href="#features">Our Offerings</a>
+              <a href="#why-platter">Why Platter</a>
+              <a href="#contact">Contact Us</a>
+            </div>
+          </div>
     </nav>
-    <section class="hero-section">
+    <section class="hero-section" id="home">
             <div class="heading-wrapper">
                 <div class="container">
                     <div class="text-center">
@@ -39,7 +49,7 @@
                             for DeFi investments <span class="f-heading">& </span>Web3 products
                         </p>
                     </div>
-                    <div class="col-lg-9 text-center">
+                    <div class="col-lg-9 text-center text-shadow">
                         <p>
                             Platter simplifies and accelerate the adoption of DeFi investment opportunities and various
                             Web3 products, through curated aggregation, real-time insights and simple end-user experience
@@ -49,13 +59,13 @@
             </div>
             </div>
 
-            <div class="newsletter mt-sm-3">
+            <!-- <div class="newsletter mt-sm-3">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-6">
                             <div class="subscription mt-5">
 
-                                <!-- <h5 class="pb-3 text-gray">Come on the Web3 adventure with us!</h5> -->
+                                <h5 class="pb-3 text-gray">Come on the Web3 adventure with us!</h5>
                                 <form class="d-flex align-items-end">
                                     <div class="form-group mt-sm-2">
                                         <input class="form-input" type="mail" name="email" id="text"
@@ -70,15 +80,15 @@
                                 </form>
                             </div>
     
-                            <!-- <div class="slider">
+                            <div class="slider">
                                 <img class="slider-bob" src="./assets/img/blob.png" alt="blob">
                                 <div class="slider-line"></div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
 
         <!-- <a class="platter-stamp">
             <div class="platter-stamp-inner"><img src="./assets/img/Top Right Arrow.svg" alt="logo"></div>
@@ -88,42 +98,163 @@
         <!-- <img src="./assets/img/landing-top.jpg" class="platter-hero-img" alt="welcome platter"> -->
         <!-- <img src="./assets/img/hero-sphere.svg" class="platter-hero-sphere" alt="welcome wave"> -->
         <!-- <img src="./assets/img/art1.png" class="platter-hero-sphere" alt="welcome wave"> -->
-        <img src="./assets/img/sphere-bg.png" class="platter-hero-sphere-bg" alt="welcome wave">
+        <!-- <img src="./assets/img/sphere-bg.png" class="platter-hero-sphere-bg" alt="welcome wave"> -->
     </section>
 
-    <section class="why-to-invest">
-        <div class="container">
-            <div class="why-heading heading-wrapper">
-                <h1 class="why-heading-1 heading-animate-part">Why you should</h1>
-                <h1 class="heading-large text-gradient why-heading-2 heading-animate-part">invest in Defi</h1>
-                <!-- <img class="why-heading-2 heading-animate-part" src="./assets/img/invest in DeFi.svg"
-                    alt="invest in Defi"> -->
-            </div>
-            <div class="why-content">
-                <p class="why-content-subtext">
-                    Unlike centralised exchanges we dont hold your funds in
-                </p>
-                <div class="why-content-text">
-                    <span>
-                        Your
-                    </span>
-                    <div class="why-content-scrolltext">
-                        <span class="f-heading scrolltext scrolltext-wallet text-gr text-gr-primary">Wallet</span>
-                        <span class="f-heading scrolltext scrolltext-keys text-gr text-gr-primary">Keys</span>
-                        <span class="f-heading scrolltext scrolltext-token text-gr text-gr-primary">Token</span>
+    <div class="feature-section" id="features">
+      <section class="features-heading-section">
+          <div class="container">
+              <ul class="features-menu">
+                  <li class="features-link features-link-spotlight active" onclick="goToTabs('.feature-body-spotlight')">
+                      <p>Spotlight</p>
+                  </li>
+                  <li class="features-link features-link-trends" onclick="goToTabs('.feature-body-trends')">
+                      <p>Trends</p>
+                  </li>
+                  <li class="features-link features-link-store" onclick="goToTabs('.feature-body-store')">
+                      <p>Store</p>
+                  </li>
+
+              </ul>
+              <div class="shadow-separator"></div>
+
+          </div>
+      </section>
+
+      <section class="features-body-section">
+          <div class="container">
+              <div class="features-body">
+                  <div class="features-body-content">
+                    <div class="feature-body-spotlight">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="./assets/img/career-at-cult.webp" class="feature-img" id="spotlight-img"/>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="feature-content-container">
+                                        <div class="feature-content">
+                                            <div class="text-heading">One Project</div>
+                                            <h5>per Sector, per Instrument</h5>
+                                            <br/>
+                                            <p>
+                                                To minimize analysis paralysis among users, we offer several investment options including Farms, Pools, Indexes, Derivatives, and NFTs.
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading">Backed by Research</div>
+                                            <h5>Governed by community</h5>
+                                            <br/>
+                                            <p>
+                                                To minimize analysis paralysis among users, we offer several investment options including Farms, Pools, Indexes, Derivatives, and NFTs.
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading">Projects rotated every</div>
+                                            <h5>15 Days</h5>
+                                            <br/>   
+                                            <p>
+                                                To minimize analysis paralysis among users, we offer several investment options including Farms, Pools, Indexes, Derivatives, and NFTs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/img/hero-bg.png" alt="" class="bg">
-    </section>
 
-    <section class="platter-values" id="my-sticky-element">
+                    <div class="feature-body-trends">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="./assets/img/career-at-cult.webp" class="feature-img" id="trends-img"/>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="feature-content-container">
+                                        <div class="feature-content">
+                                            <div class="text-heading">Tokens & NFTs</div>
+                                            <h5>picked by our AI Engine</h5>
+                                            <br/>
+                                            <p>
+                                                The data collected by Blockchain explorers and sent into our AI engine would be screened to identify these tendencies.
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading">Derive insights</div>
+                                            <h5>from live user transactions</h5>
+                                            <br/>
+                                            <p>
+                                                Conclusions from real-time user interactions across Defi Protocols.
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading">One Click Investment</div>
+                                            <h5>in the Projects</h5>
+                                            <br/>   
+                                            <p>
+                                                Users will have the option to participate in various projects using a single wallet since different DEXs offer diverse investment options in DeFi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-body-store">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="./assets/img/career-at-cult.webp" class="feature-img" id="store-img"/>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="feature-content-container">
+                                        <div class="feature-content">
+                                            <div class="text-heading">Discover Decentralised<br/>Apps</div>
+                                            <h5>of various categories across Web3</h5>
+                                            <br/>
+                                            <p>
+                                                We work and partner with other DeFi and Web3 platforms to integrate their Services into the Platter user experience.
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading">Curated by Community</div>
+                                            <h5>and vetted by Platter</h5>
+                                            <br/>
+                                            <p>
+                                                Increasing trust and discoverability
+                                            </p>
+                                        </div>
+                                        <div class="feature-content">
+                                            <div class="text-heading"> Anyone from anywhere</div>
+                                            <h5>can build on Platter's ecosystem</h5>
+                                            <br/>   
+                                            <p>
+                                                Following the tenet of Web3. Permissionless Platter will be open to everyone equally.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
+
+  
+
+    <section class="platter-values" id="why-platter">
         <div class="container">
-
-            <div class="heading-wrapper">
-                <h2 class="value-heading-1 heading-animate-part py-0">How Platter creates value</h2>
-                <h1 class="heading-small text-gradient-small heading-animate-part pt-0">for you?</h1>
+            <div class="heading-wrapper px-2 py-2">
+                <div class="text-center">
+                    <h3 class="value-heading-1 py-0">How Platter creates value</h3>
+                    <h2 class="heading-small text-gradient-small pt-0">for you?</h2>
+                </div>
+                
                 <!-- <div class="">
                     <img class="value-heading-2 heading-animate-part" src="./assets/img/for You.svg" alt="for you">
                 </div> -->
@@ -135,9 +266,9 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 value-points">
                         <div class="value-1">
                             <div class="value-text-wrapper">
-                                <img class="value-image value1-image" src="./assets/img/nft_memes.png" alt="">
+                                <img class="value-image value1-image" src="./assets/img/3.png" alt="">
 
-                                <div class="value-text">
+                                <div class="value-text text-center">
                                     <h4>Frictionless solutions</h4>
                                     <p class="text-gray">for intuitive user experience</p>
                                 </div>
@@ -147,10 +278,10 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 value-points">
                         <div class="value-3">
                             <div class="value-text-wrapper">
-                                <img class="value-image value3-image" src="./assets/img/learn.png" alt="">
+                                <img class="value-image value3-image" src="./assets/img/1.png" alt="">
 
-                                <div class="value-text">
-                                    <h4>Stay Updated</h4>
+                                <div class="value-text text-center">
+                                    <h4>Stay<br/>Updated</h4>
                                     <p class="text-gray">with the evolving Defi ecosystem</p>
                                 </div>
                             </div>
@@ -159,9 +290,9 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 value-points">
                         <div class="value-2">
                             <div class="value-text-wrapper">
-                                <img class="value-image value2-image" src="./assets/img/developer_male.png" alt="">
+                                <img class="value-image value2-image" src="./assets/img/2.png" alt="">
 
-                                <div class="value-text">
+                                <div class="value-text text-center">
                                     <h4>Learn anything about DeFi in </h4>
                                     <p class="text-gray">6 points or even less</p>
                                 </div>
@@ -173,191 +304,98 @@
         </div>
     </section>
 
-    <!-- <section class="platter-solution py-0">
-        <div class="marquee">
-            <span>SOLUTIONS OFFERED BY PLATTER</span>
-            <span><i data-feather="star"></i></span>
-            <span>SOLUTIONS OFFERED BY PLATTER</span>
-            <span><i data-feather="star"></i></span>
-            <span>SOLUTIONS OFFERED BY PLATTER</span>
-            <span><i data-feather="star"></i></span>
-
-        </div>
-    </section> -->
-
-    <div class="feature-section">
-        <section class="features-heading-section">
-            <div class="container">
-                <ul class="features-menu">
-                    <li class="features-link features-link-spotlight active" onclick="goToTabs('.feature-body-spotlight')">
-                        <p>Spotlight</p>
-                    </li>
-                    <li class="features-link features-link-trends" onclick="goToTabs('.feature-body-trends')">
-                        <p>Trends</p>
-                    </li>
-                    <li class="features-link features-link-store" onclick="goToTabs('.feature-body-store')">
-                        <p>Store</p>
-                    </li>
-
-                </ul>
-                <div class="shadow-separator"></div>
-
-            </div>
-        </section>
-        
-        <section class="features-body-section">
-            <div class="container">
-                <div class="features-body">
-                    <div class="features-body-content">
-                        <div class="feature-body-spotlight">
-                            <div class="feature-content">
-                                <p class="text text-body">
-                                    One Project
-                                </p>
-                                <p class="text f-body text-heading">
-                                    per Sector, per Instrument
-                                </p>
-                            </div>
-                            <br/>
-                            <div class="feature-content">
-                                <p class="text text-body">
-                                    Backed by Research
-                                </p>
-                                <p class="text f-body text-heading">
-                                    Governed by community
-                                </p>
-                            </div>
-                            <br/>
-                            <div class="feature-content">
-                                <p class="text text-body">
-                                    Projects rotated every
-                                </p>
-                                <p class="text f-body text-heading">
-                                    15 days
-                                </p>
-                            </div>
-                            <hr class="feature-content feature-separator"/>
-                            
+    <section class="why-to-invest">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="why-heading heading-wrapper">
+                        <div class="text-center pt-4 mt-4">
+                            <h4 class="value-heading-1 heading-animate-part py-0">Why you should</h4>
+                            <h3 class="heading-small text-gradient-small pt-0">invest in Defi?</h2>
                         </div>
-                        
-                        <div class="feature-body-trends">
-                            <div class="feature-content">
-                                <p class="text text-body">
-                                    Token & NFT Trends would be picked by
-                                </p>
-                                <p class="text f-body text-heading">
-                                    our AI Engine
-                                </p>
-                            </div>
-                            <div class="feature-content">
-
-                                <p class="text text-body">
-                                    Derive insights from
-                                </p>
-                                <p class="text f-body text-heading">
-                                    Live user transactions
-                                </p>
-                            </div>
-                            <div class="feature-content">
-                                <p class="text f-body text-heading">
-                                    One click investment
-                                </p>
-                                <p class="text text-body">
-                                    in these projects
-                                </p>
-
-                            </div>
-                            <hr class="feature-content feature-separator"/>
-                        </div>
-
-
-                        <div class="feature-body-store">
-                            <div class="feature-content">
-                                <p class="text f-body text-heading">
-                                    Discover Decentralised Apps
-                                </p>
-                                <p class="text text-body">
-                                    of various categories across Web3
-                                </p>
-                            </div>
-                            <div class="feature-content">
-                                <p class="text f-body text-heading">
-                                    Curated by community
-                                </p>
-                                <p class="text text-body">
-                                    and vetted by Platter
-                                </p>
-                            </div>
-                            <div class="feature-content feature-content-last">
-                                <p class="text f-body text-heading">
-                                   Anyone from anywhere can build
-                                </p>
-                                <p class="text text-body">
-                                    on Platter's ecosystem
-                                </p>
-
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="why-content">
+                        <p class="why-content-subtext">
+                            Unlike centralised exchanges we dont hold your funds in
+                        </p>
+                        <div class="why-content-text">
+                            <span>
+                                Your
+                            </span>
+                            <div class="why-content-scrolltext">
+                                <span class="f-heading scrolltext scrolltext-wallet text-gr text-gr-primary">Wallet</span>
+                                <span class="f-heading scrolltext scrolltext-keys text-gr text-gr-primary">Keys</span>
+                                <span class="f-heading scrolltext scrolltext-token text-gr text-gr-primary">Token</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <div class="features-circle-bg"></div> -->
+        </div>
+        <img src="./assets/img/hero-bg.png" alt="" class="bg">
+    </section>
 
     </div>
 
-    <section class="links-section">
-
+    <section class="links-section" id="contact">
         <div class="container">
-            <h3 class="section-heading text-white">
-                Connect with <span class="section-heading text-gradient">us</span>
-            </h3>
-            <div class="row gx-5">
-                <div class="col-xl-3 col-md-6">
-                    <div class="link-card reddit-card">
-                        <div class="link-card-text">
-                            <img src="./assets/img/Reddit.svg" alt="Reddit">
-                            <p>
-                                Reddit
-                            </p>
+            <div class="row">
+                <div class="col">
+                    <a href="./index.html">
+                        <img src="./assets/img/platter_logo.svg" alt="platter" class="logo_img">
+                    </a>
+                    <p class="footer-description">
+                        Platter simplifies and accelerate the adoption of DeFi investment opportunities and various Web3 products, through curated aggregation, real-time insights and simple end-user experience
+                    </p>
+                    <p class="footer-description">Write to us at <a href="mailto:team@platter.fi">team@platter.fi</a></p>
+                </div>
+                <div class="col">
+                    <div class="grey-card">
+                        <h4 class="section-heading text-white">
+                            Connect with <span class="section-heading text-gradient">us</span>
+                        </h4>
+                        <div class="row gx-5">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="social-links-container">
+                                    <div class="social-links">
+                                        <div>
+                                            <img src="./assets/img/Reddit.svg" alt="Reddit">
+                                        </div>
+                                        <div>
+                                                Reddit
+                                        </div>
+                                    </div>
+                                    <div class="social-links">
+                                        <div>
+                                            <img src="./assets/img/Twitter.svg" alt="Twitter">
+                                        </div>
+                                        <div>
+                                            Twitter
+                                        </div>
+                                    </div>
+                                    <div class="social-links">
+                                        <div>
+                                            <img src="./assets/img/Telegram.svg" alt="Telegram">
+                                        </div>
+                                        <div>
+                                            Telegram
+                                        </div>
+                                    </div>
+                                    <div class="social-links">
+                                        <div>
+                                            <img src="./assets/img/Discord.svg" alt="Discord">
+                                        </div>
+                                        <div>
+                                            Discord
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <i data-feather="arrow-up-right" class="redirect-icon"></i>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="link-card twitter-card">
-                        <div class="link-card-text">
-                            <img src="./assets/img/Twitter.svg" alt="Twitter">
-                            <p>
-                                Twitter
-                            </p>
-                        </div>
-                        <i data-feather="arrow-up-right" class="redirect-icon"></i>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="link-card telegram-card">
-                        <div class="link-card-text">
-                            <img src="./assets/img/Telegram.svg" alt="Telegram">
-                            <p>
-                                Telegram
-                            </p>
-                        </div>
-                        <i data-feather="arrow-up-right" class="redirect-icon"></i>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="link-card discord-card">
-                        <div class="link-card-text">
-                            <img src="./assets/img/Discord.svg" alt="Discord">
-                            <p>
-                                Discord
-                            </p>
-                        </div>
-                        <i data-feather="arrow-up-right" class="redirect-icon"></i>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -370,8 +408,6 @@
         <div class="container">
             <div class="footer-body">
                 <div class="footer-contact">
-                    <p>Contact: <span>team@platter.fi</span></p>
-
                     <div class="social-icons">
                         <a>LinkedIn <i data-feather="arrow-up-right"></i></a>
                         <a>AngelList <i data-feather="arrow-up-right"></i></a>
@@ -385,6 +421,20 @@
 
     </footer>
 
+    <script>
+      const navBar = document.getElementsByClassName('nav-header')[0];
+      document.addEventListener('scroll', () => {
+        // Add Throttling here
+        console.log(window.scrollY);
+        if(window.scrollY === 0){
+          navBar.classList.remove('navbar-scrolled');
+        } else {
+          navBar.classList.add('navbar-scrolled');
+        }
+      } );
+
+      
+      </script>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE
 9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
