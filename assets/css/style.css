@@ -6389,6 +6389,7 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: #151515;
+  /* background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);; */
   overflow-x: hidden;
 }
 
@@ -7171,7 +7172,8 @@ span {
   flex-direction: column;
 }
 .features-body-content .feature-content p {
-  transition: all 0.6s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  color: #bdbdbd;
+  transition: all 0.6s cubic-bezier(0.4, 0, 1, 0.15);
 }
 .features-body-content .feature-content p:nth-child(2) {
   transition-delay: 0.35s;
@@ -7443,13 +7445,15 @@ span {
 .platter-values .value-text-wrapper .h4 {
   line-height: 1;
   letter-spacing: 0;
-  font-size: 3.2rem;
+  font-size: 2.75rem;
+  color: #e7e7e7;
   z-index: 2;
   font-weight: 700;
   position: relative;
+  margin-bottom: 1.2rem;
 }
 .platter-values .value-text-wrapper p {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.05rem;
@@ -7571,11 +7575,12 @@ span {
 .feature-body-store {
   height: 100%;
   padding: 4rem;
+  /* margin-bottom: 3rem !important; */
 }
 
 .feature-img {
-  width: 100%;
-  display: flex;
+  width: 30rem;
+  /* display: flex; */
   align-items: center;
   /* background: url('../img/career-at-cult.webp');
   background-size: cover;
@@ -7680,4 +7685,14 @@ span {
   top: 0%;
   bottom: 30%;
   left: 65%;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.vertical {
+  border-left: 1px solid rgb(85, 85, 85);
+  height: 100%;
+  margin-left: 50%;
 }

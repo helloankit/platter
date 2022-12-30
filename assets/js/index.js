@@ -119,7 +119,7 @@ gsap.set(".feature-content-container", {
     pinSpacing: true,
     endTrigger: ".feature-body-trends",
     start: "top-=85%",
-    end: "top bottom-=40%",
+    end: "top bottom-=30%",
   }
 });
 
@@ -130,7 +130,7 @@ gsap.set(".feature-content-container", {
     pinSpacing: true,
     endTrigger: ".feature-body-store",
     start: "top-=85%",
-    end: "top bottom-=40%",
+    end: "top bottom-=30%",
   }
 });
 
@@ -141,7 +141,7 @@ gsap.set(".feature-content-container", {
     pinSpacing: true,
     endTrigger: ".feature-body-trends",
     start: "top-=25%",
-    end: "top bottom+=20%",
+    end: "top bottom+=30%",
   }
 });
 
@@ -174,7 +174,7 @@ gsap.set(".feature-content-container", {
     pinSpacing: true,
     endTrigger: ".platter-values",
     start: "top-=85%",
-    end: "top bottom-=30%",
+    end: "top bottom-=15%",
   }
 });
 
@@ -192,43 +192,43 @@ gsap.from(".link-card", {
 
 });
 
-// document.querySelectorAll(".feature-content").forEach(el => {
-//   if (!(el.classList.contains("feature-content-last"))) {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: el,
-//         scrub: 0.5,
-//         start: "top bottom-=15%",
-//         toggleActions: "play pause resume reverse",
-//         //endTrigger: el,
-//         end: "+=70%",
-//         //markers:true
-//       }
-//     }).set(el, { opacity: 0, scale: 0.65, duration: 1 })
-//       .to(el, { opacity: 1, scale: 1, duration: 20 })
-//       .to(el, { opacity: 1, scale: 1, duration: 30 })
-//       .to(el, { opacity: 1, scale: 1, duration: 30 })
-//       .to(el, { opacity: 1, scale: 1, duration: 30 })
-//       .to(el, { opacity: 1, scale: 0.9, duration: 30 })
-//       .to(el, { opacity: 0.75, scale: 0.8, duration: 20 })
-//       .to(el, { opacity: 0.3, scale: 0.5, duration: 20 })
-//       .to(el, { opacity: 0, scale: 0.5, duration: 5 })
-//       .to(el, { opacity: 0, scale: 0.3, duration: 2 })
-//   }
-//   else {
-//     gsap.timeline({
-//       scrollTrigger: {
-//         trigger: el,
-//         scrub: 4,
-//         start: "top bottom-=5%",
-//         toggleActions: "play pause resume reverse",
-//         endTrigger: el,
-//         end: "+=70%",
-//         markers: true
-//       }
-//     })
-//   }
-// });
+document.querySelectorAll(".feature-content").forEach(el => {
+  if (!(el.classList.contains("feature-content-last"))) {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: 0.5,
+        start: "top bottom-=15%",
+        toggleActions: "play pause resume reverse",
+        //endTrigger: el,
+        end: "+=70%",
+        //markers:true
+      }
+    }).set(el, { opacity: 0, scale: 0.65, duration: 1 })
+      .to(el, { opacity: 1, scale: 1, duration: 20 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 1, duration: 30 })
+      .to(el, { opacity: 1, scale: 0.9, duration: 30 })
+      .to(el, { opacity: 0.75, scale: 0.8, duration: 20 })
+      .to(el, { opacity: 0.3, scale: 0.5, duration: 20 })
+      .to(el, { opacity: 0, scale: 0.5, duration: 5 })
+      .to(el, { opacity: 0, scale: 0.3, duration: 2 })
+  }
+  else {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        scrub: 4,
+        start: "top bottom-=5%",
+        toggleActions: "play pause resume reverse",
+        endTrigger: el,
+        end: "+=70%",
+        markers: true
+      }
+    })
+  }
+});
 
 function goToTabs(section) {
   gsap.to(window, { duration: 0.3, scrollTo: { y: section, offsetY: 280 }, ease: "none" });
