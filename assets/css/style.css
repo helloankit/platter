@@ -6488,7 +6488,7 @@ h6,
 
 .text-gray {
   /* color: #383838 !important; */
-  color: #888888 !important;
+  color: #4e4e4e !important;
 }
 
 h1,
@@ -7400,12 +7400,14 @@ span {
 
 .platter-values {
   /* background-color: rgba(217, 217, 217, 0.2); */
-  background-color: #0d0d0d;
+  background-color: #e7e7e7;
+  background: linear-gradient(180deg, rgba(231,231,231,1) 23%, rgba(216,255,251,1) 100%);
   /* background-image: url(../../assets/img/paper-bg.jpg); */
   background-size: cover;
 }
 .platter-values .value-heading-1 {
-  color: #d8d8d8;
+  /* color: #d8d8d8; */
+  color: #242424;
 }
 .platter-values .value-heading-2 {
   height: 8rem;
@@ -7446,7 +7448,8 @@ span {
   line-height: 1;
   letter-spacing: 0;
   font-size: 2.75rem;
-  color: #e7e7e7;
+  /* color: #e7e7e7; */
+  color: #1e1e1e;
   z-index: 2;
   font-weight: 700;
   position: relative;
@@ -7695,4 +7698,10 @@ span {
   border-left: 1px solid rgb(85, 85, 85);
   height: 100%;
   margin-left: 50%;
+}
+
+.feature-section{
+  /* background-size: cover;
+  background-position: center;
+  background: linear-gradient(180deg, rgba(21,21,21,1) 23%, rgba(61,57,57,1) 100%);; */
 }
