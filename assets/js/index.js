@@ -118,7 +118,7 @@ gsap.set(".feature-content-container", {
     pin: true,
     pinSpacing: true,
     endTrigger: ".feature-body-trends",
-    start: "top-=85%",
+    start: "top center-=20%",
     end: "top bottom-=30%",
   }
 });
@@ -129,7 +129,7 @@ gsap.set(".feature-content-container", {
     pin: true,
     pinSpacing: true,
     endTrigger: ".feature-body-store",
-    start: "top-=85%",
+    start: "top center-=20%",
     end: "top bottom-=30%",
   }
 });
@@ -173,7 +173,7 @@ gsap.set(".feature-content-container", {
     pin: true,
     pinSpacing: true,
     endTrigger: ".platter-values",
-    start: "top-=85%",
+    start: "top center-=20%",
     end: "top bottom-=15%",
   }
 });
