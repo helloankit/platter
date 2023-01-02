@@ -6493,7 +6493,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 1;
 }
 @media (max-width: 47.99em) {
@@ -7245,7 +7245,7 @@ span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 1rem 0rem;
+  padding: 0.75rem 0rem;
   background-size: 200% auto;
 }
 .text-gradient-small {
@@ -7611,15 +7611,29 @@ span {
   color: #b1fff3;
 }
 
+.social-link-anchor{
+  text-decoration: none;
+  display: contents;
+  color: inherit;
+}
+
+.social-link-anchor:hover {
+  color: inherit;
+}
+
 .social-links img {
   width: 4rem;
   margin-right: 0.25rem;
 }
 
-.social-links div {
+.social-links>div {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
 }
 
 .grey-card {
