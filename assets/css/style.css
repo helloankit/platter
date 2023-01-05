@@ -7228,7 +7228,7 @@ span {
   letter-spacing: -0.2rem;
 }
 .hero-title {
-  font-size: 9rem;
+  font-size: 8.5rem;
   font-style: normal;
   letter-spacing: -0.2rem;
   filter: drop-shadow(-6px 4px 4px rgba(0, 0, 0, 0.47));
@@ -7255,7 +7255,7 @@ span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1rem 0rem;
-  background-size: 35% auto;
+  /* background-size: 35% auto; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
