@@ -6672,6 +6672,17 @@ span {
     var(--marquee-width) / var(--marquee--elements-displayed)
   );
   --marquee-animation-duration: calc(var(--marquee-elements) * 1s);
+  scrollbar-color: #373d58 #1f253c;
+}
+
+::-webkit-scrollbar {
+    background: #1f253c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #373d58;
+    -webkit-border-radius: 0.75ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
 }
 
 .marquee {
